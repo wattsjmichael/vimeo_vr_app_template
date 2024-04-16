@@ -1,0 +1,254 @@
+<krpano tour_mode="local" floor_height="160" map_angle="0" minimap_angle="0" debugkeys="false" debugmode="true" accomp="true">
+
+<!-- <include url="video_lib.js" /> -->
+
+
+  <data if="device.mobile" name="map_fov" value="181" />
+  <data if="device.tablet" name="map_fov" value="181" />
+  <data if="device.desktop" name="map_fov" value="178" />
+
+
+
+  <action autorun="onstart" type="Javascript"><![CDATA[
+
+		window.accomploStrings = {
+			
+			'stair_1': "stair_1",
+			'stair_2': "stair_2",
+      'stair_3': "stair_3",
+      'stair_4': "stair_4",
+      ext_use: "extinguisher_use",
+			started_tour: "started_tour",
+			completed_tour: "completed_tour",
+      elev_phone:"elev_phone",
+            
+           
+		};
+
+    ]]>  </action>
+
+
+
+
+
+  <data name="item_lib_content"><![CDATA[
+      
+        <h3>Floor Feature Menu</h3>
+       
+        <div id="sort-me" class="item-link-container stair" data-id="stairwell"></div>
+         <p>Safety Features:</p>
+        <div class="item-link-container" data-id="fire_ext"></div>
+<div class="item-link-container" data-id="defib"></div>
+<div class="item-link-container" data-id="first_aid"></div>
+<!-- <div class="item-link-container" data-id="emer_phone"></div> -->
+<div class="item-link-container closest">
+</br>
+<div class="item-closest-container" data-id="fire_ext"></div>
+<div class="item-closest-container" data-id="defib"></div>
+<div class="item-closest-container" data-id="first_aid"></div>
+</div>
+
+        ]]>  </data>
+
+  <layer if="mode == 'explore'" name="items_hud" style="items_hud_style">
+    <layer name="first_aid" style="item_hud_style" url="../%$app_version%/skin/%$skin%/hotspots/first_aid.png" scale=".25" align="middle" onclick="hud_focus(90)" />
+    <layer name="defib" style="item_hud_style" url="../%$app_version%/skin/%$skin%/hotspots/aed.png" scale=".25" align="middle" x="-60" onclick="hud_focus(90)" />
+    <layer name="pull_station" style="item_hud_style" url="../%$app_version%/skin/%$skin%/hotspots/fire_alarm.png" scale=".25" align="middle" x="60" onclick="hud_focus(90)" />
+  </layer>
+
+
+
+
+
+
+
+
+  <!-- video menu -->
+ 
+
+ 
+
+  <!-- pois -->
+
+
+  <data name="welcome_screen" type="placard"><![CDATA[ You are in explore mode. Take a moment to find the safety features and exits on your floor. ]]></data>
+  <!-- <data name="defib" type="placard" say="This automated external defibrillator is available for emergency use. The device provides step-by-step instructions on how to use it."><![CDATA[
+        This automated external defibrillator is available for emergency use.<br><br>The device provides step-by-step instructions on how to use it.
+	]]></data> -->
+  <!-- <data name="defib" type="video"><![CDATA[
+        [{"src": ["https://akproductionsmedia.streaming.mediaservices.windows.net/579baa13-4444-4ee1-b00e-49a5778b74c2/Gates-AED.ism/manifest"]}]
+	]]></data> -->
+
+  <data name="warden_phone" type="placard" say="Emergency phones are located inside of the stairwells on floors 2, 6, 10, and the basement.  Use them to relay information to building staff."><![CDATA[
+        <img src="images/Warden_phone_edit.jpg" width="260" height="400"/><br>Emergency phones are located inside of the stairwells on floors 2, 6, 10, and the basement.  Use them to relay information to building staff.
+	]]>  </data>
+  <data name="el_em_phone" type="placard" say="The building's elevator phones are monitored 24/7.  Building staff will be notified upon receipt of an entrapment call and will dispatch the elevator contractor."><![CDATA[
+        <img src="images/elevator_push.jpg" width="250" height="150"/><br>The building's elevator phones are monitored 24/7.  Building staff will be notified upon receipt of an entrapment call and will dispatch the elevator contractor. 
+	]]>  </data>
+  <data name="ff_phone_stair_poi" type="placard" say="These firefighter phones are used by first responders to communicate with the Fire Command Center."><![CDATA[
+        <img src="images/FF_phone_red.jpg" width="25%"/><br>These firefighter phones are used by first responders to communicate with the Fire Command Center. 
+	]]>  </data>
+
+  <data name="ff_phone_elev_poi" type="placard" say="These firefighter phones are used by first responders to communicate with the Fire Command Center."><![CDATA[
+        <img src="images/FF_phone_silver.jpg" width="25%"/><br>These firefighter phones are used by first responders to communicate with the Fire Command Center. 
+	]]>  </data>
+  <data name="emer_phone_poi" type="placard" say="Use these Emergency Phones to contact security in the event of an emergency or if you need assistance evacuating."><![CDATA[
+        <img src="images/emergency_phone.jpg" /><br>Use these Emergency Phones to contact security in the event of an emergency or if you need assistance evacuating. 
+	]]>  </data>
+  <data name="pull_station" type="placard" say="Manual pull stations will put the entire building into alarm and will notify the Fire Department.  "><![CDATA[
+        <img src="images/pull_station.jpg" width="126" height="183"/><br>Manual pull stations will put the entire building into alarm and will notify the Fire Department.  
+	]]>  </data>
+  <data name="fire_ext_poi" type="video"><![CDATA[
+        {"id":"347119375"}
+	]]>  </data>
+
+  <data name="evac_chair_poi" type="video"><![CDATA[
+        [{ "src": ["https://akproductionsmedia.streaming.mediaservices.windows.net/ac1b6689-be95-4619-a9bf-dbee8c1d3bfe/Evacuation Chair Training Video .ism/manifest(format=mpd-time-cmaf)"]}]
+	]]>  </data>
+
+  <!-- <data name="defib" type="video"><![CDATA[
+        [{ "src": ["https://akproductionsmedia.streaming.mediaservices.windows.net/579baa13-4444-4ee1-b00e-49a5778b74c2/Gates-AED.ism/manifest" ]}]
+	]]></data> -->
+
+  <data name="defib" type="placard" say="This automated external defibrillator comes with step-by-step instructions should you ever need to use it."><![CDATA[
+        <img src="images/aed.jpg" width="60%" /><br>This automated external defibrillator comes with step-by-step instructions should you ever need to use it. 
+	]]>  </data>
+
+    <data name="fld_stretcher" type="placard" say="This folding stretcher can be used to transport injured people in an emergency situation."><![CDATA[
+        <img src="images/stretcher.jpg" width="80%" /><br>This folding stretcher can be used to transport injured people in an emergency situation. 
+	]]>  </data>
+
+
+
+  <!-- <data name="evac_chair_poi" say="Evacuation chairs can be used to help evacuate someone with a mobility impairment. Floor wardens are trained on how to use them."><![CDATA[
+        <img src="images/evac_chair.jpg" /><br>Evacuation chairs can be used to help evacuate someone with a mobility impairment. Floor wardens are trained on how to use them.
+    ]]></data> -->
+  <data name="first_aid" say="This station contains basic First Aid supplies for minor conditions. Please seek professional medical help for serious injuries or ailments."><![CDATA[
+        <img src="images/first_aid_kit.jpg" /><br> This station contains basic First Aid supplies for minor conditions. Please seek professional medical help for serious injuries or ailments.
+    ]]>  </data>
+
+  <data name="first_aid_wall" say="This station contains basic First Aid supplies for minor conditions. Please seek professional medical help for serious injuries or ailments."><![CDATA[
+        <img src="images/first_aid_kit_wall.jpg" /><br> This station contains basic First Aid supplies for minor conditions. Please seek professional medical help for serious injuries or ailments.
+    ]]>  </data>
+
+
+
+
+  <!-- videos -->
+  <!-- <data name="fire_ext_vid" stream="1"><![CDATA[
+         [{fire_ext_vid}]
+	]]>  </data>
+
+  <data name="evac_chair_vid" stream="1"><![CDATA[
+       {"id": "347119375"}
+	]]>  </data>
+
+  <data name="em_team_roles" stream="1"><![CDATA[
+       {"id": "347119375"}
+	]]>  </data>
+
+  <data name="em_supp_vid" stream="1"><![CDATA[
+       [{"src": [ "https://akproductionsmedia.streaming.mediaservices.windows.net/c4046f8c-b85d-4360-8daa-db8cea603866/EmergencyKit_general_100120.ism/manifest"]}]
+	]]>  </data>
+
+  <data name="ff_1001_vid" stream="1"><![CDATA[
+       [{"src": [ "https://akproductionsmedia.streaming.mediaservices.windows.net/4357d404-8377-4aeb-bbc0-97927c3f0f2c/Generic High-Rise Fire Drill FIN.ism/manifest(format=m3u8-cmaf)"]}]
+	]]>  </data> -->
+
+  <!-- <data name="int_relo" stream="1"><![CDATA[
+       [{"src": [ "https://akproductionsmedia.streaming.mediaservices.windows.net/9f98270c-f5f6-4b89-b292-cbdd395b8de9/Internal Relocation Procedures_g.ism/manifest"]}]
+	]]></data> -->
+
+  <!-- <data name="evac_video" stream="1"><![CDATA[
+       [{"src": [ "https://akproductionsmedia.streaming.mediaservices.windows.net/36f749f9-39e7-4f8a-88df-73fbffe94227/Evacuation Procedures_general_10.ism/manifest"]}]
+	]]>  </data>
+
+  <data name="shelter_ip_video" stream="1"><![CDATA[
+       [{"src": [ "https://akproductionsmedia.streaming.mediaservices.windows.net/24a8094a-a739-4415-b150-ca8724df120c/ShelterInPlace_general_100120.ism/manifest"]}]
+	]]>  </data>
+
+  <data name="mobility_video" stream="1"><![CDATA[
+       [{"src": [ "https://akproductionsmedia.streaming.mediaservices.windows.net/b88b2df1-7311-442d-9864-af0720a4aba8/MobilityImpaired_general_090220.ism/manifest"]}]
+	]]>  </data>
+
+  <data name="disc_fire_vid" stream="1"><![CDATA[
+        [{"src": ["https://akproductionsmedia.streaming.mediaservices.windows.net/5e1503c9-2d62-4652-bd75-858ab00233d2/DiscoverFire_general_100120.ism/manifest"]}]
+	]]>  </data>
+
+  <data name="sprinkler_vid" stream="1"><![CDATA[
+        [{"src": ["https://akproductionsmedia.streaming.mediaservices.windows.net/c3b61833-5a06-4d24-8568-cb13ed7174c7/SprinklerHeads_general_approved_.ism/manifest"]}]
+	]]>  </data>
+
+  <data name="earthquake_vid" stream="1"><![CDATA[
+        [{"src": ["https://akproductionsmedia.streaming.mediaservices.windows.net/e6d777ac-2e99-433c-8e8d-b2fc4f4ffd7f/EarthquakeResponse_general_10172.ism/manifest"]}]
+	]]>  </data>
+  <data name="med_em_vid" stream="1"><![CDATA[
+        [{"src": ["https://akproductionsmedia.streaming.mediaservices.windows.net/a6f356fd-812e-46b3-a91e-a0cc442d62d0/MedicalEmergency_general_100120.ism/manifest"]}]
+	]]>  </data>
+  <data name="bomb_vid" stream="1"><![CDATA[
+        [{"src": ["https://akproductionsmedia.streaming.mediaservices.windows.net/3b5fef84-6b20-4d14-993d-4043825c32ef/BombThreat_general_100120.ism/manifest"]}]
+	]]>  </data>
+  <data name="shoot_vid" stream="1"><![CDATA[
+        [{"src": ["https://akproductionsmedia.streaming.mediaservices.windows.net/08f9cced-9ed5-4474-a496-0f2ae8c8bfe6/ActiveShooter_general_101520.ism/manifest"]}]
+	]]>  </data>
+  <data name="fw_vid" stream="1"><![CDATA[
+        [{"src": ["https://akproductionsmedia.streaming.mediaservices.windows.net/7801e718-1072-4c5a-811c-6ed36c181c2a/Floor Warden Roles Duties_genera.ism/manifest"]}]
+	]]>  </data>
+  <data name="search_vid" stream="1"><![CDATA[
+        [{"src": ["https://akproductionsmedia.streaming.mediaservices.windows.net/9962b473-7e7c-4dae-8bb9-f74c6ba92871/Search_ClearFloor_general_101620.ism/manifest"]}]
+	]]>  </data>
+
+    <data name="assemb_vid" stream="1"><![CDATA[
+        [{"src": ["https://akproductionsmedia.streaming.mediaservices.windows.net/84f31434-1503-42f3-9e14-c713ae95e878/5404 composition Map_final2.ism/manifest(format=m3u8-cmaf)"]}]
+	]]>  </data> -->
+
+
+
+
+
+
+
+
+  <!-- main app include -->
+  <include url="../%$app_version%/app.xml" />
+  <!-- <plugin if="mode == 'explore'" name="overlay" url="overlay_explore_nfcu.js" keep="true" visible="false" capture="true" /> -->
+
+
+  <!--Style overide All STYLE FIXES NEED TO BE AFTER APP.XML-->
+  <style name="aed" fov="80" url="images/defib.png" tt="Defibrillator" onclick="send_accomp('defib'); open_poi('defib')" />
+  <style name="em_shower" fov="80" url="hotspot/Emergency_Shower.png" tt="Emergency Shower" onclick="send_accomp('em_shower'); open_poi('em_shower_poi')" />
+  <style name="em_eyewash" fov="80" url="hotspot/eyewash_station.png" tt="Emergency Eyewash" onclick="send_accomp('em_eywash'); open_poi('em_eyewash_poi')" />
+  <style name="warden_phone" url="hotspot/phone.png" tt="Emergency Phone" onclick="open_poi('warden_phone')" />
+  <style name="ff_phone_stair" url="hotspot/phone.png" tt="Firefighter Phone" onclick="open_poi('ff_phone_stair_poi')" />
+  <style name="ff_phone_elev" url="hotspot/phone.png" tt="Firefighter Phone" onclick="open_poi('ff_phone_elev_poi')" />
+  <style name="emer_phone" url="hotspot/phone.png" tt="Emergency Phone" onclick="open_poi('emer_phone_poi')" />
+  <style name="aor" url="hotspot/mobility.png" tt="Area of Refuge" />
+  <style name="first_aid_wall" url="hotspots/first_aid.png" tt="First Aid" onclick="send_accomp('first_aid'); open_poi('first_aid_wall')" />
+  <style name="first_aid" url="hotspots/first_aid.png" tt="First Aid" onclick="send_accomp('first_aid'); open_poi('first_aid')" />
+   <style name="stretcher" url="hotspots/cyan_dot.png" tt="Folding Stretcher" onclick="send_accomp('stretcher'); open_poi('fld_stretcher')" />
+  <style name="evac_chair" url="hotspots/evac_chair.png" tt="Evacuation Chair" onclick="send_accomp('evac_chair'); open_vid_poi('evac_chair_poi');" />
+  <style name="up_stairs_floor_17" url="hotspots/arrow_up.png" tt="UP" onclick="teleport_to_scene(gs__4894);" />
+  <style name="down_stairs_floor_18" url="hotspots/arrow_down.png" tt="Down" onclick="teleport_to_scene(gs__4965);" />
+
+  <style name="tour_end" />
+
+
+  <!--NEW CODE-->
+
+  <style name="arch" keep="false" width="250" height="500" ty="150" alpha=".7" type="text" css="font-size:30px;text-align:center;weight:bold;color:#00ffff;padding-top:300px" bgcolor="0xffffff" bgroundedge="5" bgborder="4 0x00ffff 1" bgalpha=".1" oversampling="1" mipmapping="false" zorder="1" distorted="true" torigin="view" onclick="next_scene();" visible="true" enabled="true" onover="tween(alpha,1); tween(scale,.8)" onout="tween(alpha,.7); tween(scale,1)" atv="0" ath="0" capture="false" url="hotspots/Contrast_Arrows.png" />
+  <style name="static" fov="120" alpha="1" scale=".4" zorder="2" distorted="true" torigin="view" handcursor="false" enabled="true" visible="true" atv="0" capture="false" url="hotspots/cyan_dot.png" onloaded="add_tooltip()" />
+
+
+  <!-- Overwrite Add tooltip IF you dont want tooltips in this (guided tour) mode -->
+
+
+
+
+
+
+  <!-- <include if="mode == 'explore'" url="explore_hcn.xml" /> -->
+  <!-- <plugin if="mode == 'explore'" name="overlay" url="gen_overlay_explore_bxp.js" keep="true" visible="false" capture="true" /> -->
+  <!-- end -->
+
+
+</krpano>

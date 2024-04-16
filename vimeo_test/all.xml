@@ -1,0 +1,1337 @@
+<krpano>
+    <include if="mode == 'tour'" url="default_tour.xml" />
+    <data name="floor_map" type="json"><![CDATA[
+	{
+        "8": {"sort":1,"spawn":"GS__7427","angle":-111,"elev":900,"stairs":{"1":"GS__7439","2":"GS__7430"},"map":{"name":"maps/floor_8_AM.png","scale":4.42,"mm_scale":0.055,"offset_x":0 ,"offset_y":0}},
+		"5": {"sort":2,"spawn":"GS__7363","angle":-112,"elev":600,"stairs":{"1":"GS__7372","2":"GS__7366"},"map":{"name":"maps/floor_5_AM.png","scale":4.39,"mm_scale":0.055,"offset_x":0 ,"offset_y":0}},
+		"2": {"sort":3,"spawn":"GS__7374","angle":-111,"elev":300,"stairs":{"1":"GS__7387","2":"GS__7377"},"map":{"name":"maps/floor_2_AM.png","scale":6.38,"mm_scale":0.04,"offset_x":0 ,"offset_y":0}},
+		"Lobby": {"sort":4,"spawn":"GS__7441","angle":-200,"elev":0,"stairs":{"1":"GS__7463","2":"GS__7446"},"map":{"name":"maps/lobby_AM.png","scale":6.81,"mm_scale":0.038,"offset_x":0 ,"offset_y":0}}
+		
+		
+	}
+]]>    </data>
+
+    <action name="make_sym_links" scope="local">
+		make_symbolic_link("gs__7383","gs__7374"); 
+		make_symbolic_link("gs__7410","gs__7401"); 
+		make_symbolic_link("gs__7406","gs__7419"); 
+		make_symbolic_link("gs__7375","gs__7425"); 
+		make_symbolic_link("gs__7412","gs__7416"); 
+		make_symbolic_link("gs__7412","gs__7413"); 
+		make_symbolic_link("gs__7411","gs__7413"); 
+		make_symbolic_link("gs__7465","gs__7448"); 
+
+                <!--stair 1--> 
+        make_symbolic_link("gs__7439","gs__7372");
+        make_symbolic_link("gs__7372","gs__7387");
+        make_symbolic_link("gs__7387","gs__7473");
+                <!-- 7463 -->
+
+        <!-- STair 2-->
+        make_symbolic_link("gs__7430","gs__7366"); 
+        make_symbolic_link("gs__7366","gs__7377"); 
+        make_symbolic_link("gs__7377","gs__7446"); 
+        
+                <!-- stair 3 -->
+
+        make_symbolic_link("gs__7415","gs__7463"); 
+
+                <!--stair 5-->
+        
+        make_symbolic_link("gs__7412","gs__7464"); 
+    </action>
+
+    <!--FLOOR 1-->
+    <!-- #region -->
+
+
+
+    <!-- <scene name="GS__5101" floor_id="1">
+<preview url="panos/GS__5101.tiles/preview.jpg" />
+<image prealign="0|226.7|0">
+<cube url="panos/GS__5101.tiles/pano_%s.jpg" />
+</image>
+<hotspot name="GS__5102" style="floorspot" linkedscene="GS__5102" tx="494" tz="503" />
+<hotspot name="GS__5127" style="floorspot" linkedscene="GS__5127" tx="-461" tz="-459" />
+<hotspot name="start_tour" style="blank" atv="3" ath="-1"/>
+<hotspot name="pause_play" style="blank" fov="120" atv="3" ath="-1" next="rewind"/>
+<hotspot name="rewind" style="blank" fov="120" atv="3" ath="-1" next="tour_home" />
+<hotspot name="tour_home" style="blank" fov="120" atv="3" ath="-1" next="tour_toggle" />
+<hotspot name="tour_toggle" style="blank" fov="120" atv="3" ath="-1" next="hardware_chooser"/>
+<hotspot name="hardware_chooser" style="blank" fov="120" atv="3" ath="-1" />
+<hotspot name="desktop_intro" style="blank" fov="120" atv="3" ath="-1" next="desk_zoom"/>
+<hotspot name="desk_zoom" style="blank" fov="120" atv="3" ath="-1" next="desk_hud"/>
+<hotspot name="desk_hud" style="blank" fov="120" atv="3" ath="-1" next="desk_portals"/>
+<hotspot name="desk_portals" style="blank" fov="120" atv="3" ath="-1" next="floor_chooser"/>
+<hotspot name="mobile_intro" style="blank" fov="120" atv="3" ath="-1" next="mobile_zoom"/>
+<hotspot name="mobile_zoom" style="blank" fov="120" atv="3" ath="-1" next="mobile_hud"/>
+<hotspot name="mobile_hud" style="blank" fov="120" atv="3" ath="-1" next="mobile_portal"/>
+<hotspot name="mobile_portal" style="blank" fov="120" atv="3" ath="-1" next="floor_chooser"/>
+<hotspot name="floor_chooser" style="blank" fov="120" atv="3" ath="-1" />
+</scene> -->
+    <!--#endregion-->
+
+    <!-- Lobby -->
+    <!-- #region -->
+    <!-- <scene name="GS__7440" floor_id="Lobby">
+<preview url="panos/GS__7440.tiles/preview.jpg" />
+<image prealign="0|0|0">
+<cube url="panos/GS__7440.tiles/pano_%s.jpg" />
+</image>
+<hotspot name="GS__7441" style="floorspot" linkedscene="GS__7441" tx="0" tz="0" />
+</scene> -->
+
+
+    <scene name="GS__7441" floor_id="Lobby">
+        <preview url="panos/GS__7441.tiles/preview.jpg" />
+        <image prealign="0|-23.6|0">
+            <cube url="panos/GS__7441.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7442" style="floorspot" linkedscene="GS__7442" tx="177" tz="-434" />
+
+
+        <hotspot name="start_tour" style="blank" fov="120" atv="-1" ath="93" />
+        <hotspot name="floor_chooser" style="blank" fov="120" atv="-1" ath="93"  next="second_vid"/>
+        <hotspot name="second_vid" style="blank" fov="120" atv="-1" ath="93"  next="pause_play"/>
+
+        <hotspot name="pause_play" style="blank" fov="120" atv="-1" ath="93" next="rewind" />
+        <hotspot name="rewind" style="blank" fov="120" atv="-1" ath="93" next="tour_home" />
+        <hotspot name="tour_home" style="blank" fov="120" atv="-1" ath="93" next="tour_toggle" />
+        <hotspot name="tour_toggle" style="blank" fov="120" atv="-1" ath="93" next="hardware_chooser" />
+        <hotspot name="hardware_chooser" style="blank" fov="120" atv="-1" ath="93" />
+        <hotspot name="desktop_intro" style="blank" fov="120" atv="-1" ath="93" next="desk_zoom" />
+        <hotspot name="desk_zoom" style="blank" fov="120" atv="-1" ath="93" next="desk_hud" />
+        <hotspot name="desk_hud" style="blank" fov="120" atv="-1" ath="93" next="desk_portals" />
+        <hotspot name="desk_portals" style="blank" fov="120" atv="-1" ath="93" next="floor_chooser" />
+        <hotspot name="mobile_intro" style="blank" fov="120" atv="-1" ath="93" next="mobile_pinch" />
+        <hotspot name="mobile_pinch" style="blank" fov="120" atv="-1" ath="93" next="mobile_hud" />
+        <hotspot name="mobile_hud" style="blank" fov="120" atv="-1" ath="93" next="mobile_portal" />
+        <hotspot name="mobile_portal" style="blank" fov="120" atv="-1" ath="93" next="floor_chooser" />
+
+
+    </scene>
+
+
+    <scene name="GS__7442" floor_id="Lobby">
+        <preview url="panos/GS__7442.tiles/preview.jpg" />
+        <image prealign="0|254.7|0">
+            <cube url="panos/GS__7442.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7447" style="floorspot" linkedscene="GS__7447" tx="173" tz="-323" />
+        <hotspot name="GS__7443" style="floorspot" linkedscene="GS__7443" tx="340" tz="121" />
+    </scene>
+
+
+    <scene name="GS__7443" floor_id="Lobby">
+        <preview url="panos/GS__7443.tiles/preview.jpg" />
+        <image prealign="0|-108.5|0">
+            <cube url="panos/GS__7443.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7444" style="floorspot" linkedscene="GS__7444" tx="190" tz="102" />
+    </scene>
+
+
+    <scene name="GS__7444" floor_id="Lobby">
+        <preview url="panos/GS__7444.tiles/preview.jpg" />
+        <image prealign="0|-22.2|0">
+            <cube url="panos/GS__7444.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7445" style="floorspot" linkedscene="GS__7445" tx="-91" tz="279" />
+
+    </scene>
+
+
+    <scene name="GS__7445" floor_id="Lobby">
+        <preview url="panos/GS__7445.tiles/preview.jpg" />
+        <image prealign="0|-22.1|0">
+            <cube url="panos/GS__7445.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="stair" style="blank|stair" atv="-4" ath="19"/>
+        <hotspot name="GS__7446" style="floorspot" linkedscene="GS__7446" tx="-111" tz="272" />
+    </scene>
+
+    <!--stair-->
+    <scene name="GS__7446" floor_id="Lobby" bridge="true">
+        <preview url="panos/GS__7446.tiles/preview.jpg" />
+        <image prealign="0|-18.4|0">
+            <cube url="panos/GS__7446.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="stairwell" stair="2" style="blank" ath="-19" />
+    </scene>
+
+    <!--6-->
+    <scene name="GS__7447" floor_id="Lobby">
+        <preview url="panos/GS__7447.tiles/preview.jpg" />
+        <image prealign="0|-23.7|0">
+            <cube url="panos/GS__7447.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7465" style="floorspot" linkedscene="GS__7465" tx="-174" tz="-335" />
+        <hotspot name="GS__7448" style="floorspot" linkedscene="GS__7448" tx="220" tz="-580" />
+    </scene>
+
+
+    <scene name="GS__7448" floor_id="Lobby">
+        <preview url="panos/GS__7448.tiles/preview.jpg" />
+        <image prealign="0|-27.5|0">
+            <cube url="panos/GS__7448.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7449" style="floorspot" linkedscene="GS__7449" tx="245" tz="-815" />
+    </scene>
+
+    <!--9-->    <!--10 on map err-->
+    <scene name="GS__7449" floor_id="Lobby">
+        <preview url="panos/GS__7449.tiles/preview.jpg" />
+        <image prealign="0|36.9|0">
+            <cube url="panos/GS__7449.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7450" style="floorspot" linkedscene="GS__7450" tx="705" tz="278" />
+        <hotspot name="GS__7454" style="floorspot" linkedscene="GS__7454" tx="-566" tz="-285" />
+    </scene>
+
+
+    <scene name="GS__7450" floor_id="Lobby">
+        <preview url="panos/GS__7450.tiles/preview.jpg" />
+        <image prealign="0|65.3|0">
+            <cube url="panos/GS__7450.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7451" style="floorspot" linkedscene="GS__7451" tx="369" tz="166" />
+    </scene>
+
+    <!--11-->
+    <scene name="GS__7451" floor_id="Lobby">
+        <preview url="panos/GS__7451.tiles/preview.jpg" />
+        <image prealign="0|63.4|0">
+            <cube url="panos/GS__7451.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7452" style="floorspot" linkedscene="GS__7452" tx="647" tz="287" />
+    </scene>
+
+    <!--12-->
+    <scene name="GS__7452" floor_id="Lobby">
+        <preview url="panos/GS__7452.tiles/preview.jpg" />
+        <image prealign="0|61.5|0">
+            <cube url="panos/GS__7452.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7453" style="floorspot" linkedscene="GS__7453" tx="459" tz="238" />
+    </scene>
+
+    <!--13-->
+    <scene name="GS__7453" floor_id="Lobby">
+        <preview url="panos/GS__7453.tiles/preview.jpg" />
+        <image prealign="0|61.3|0">
+            <cube url="panos/GS__7453.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7480" style="floorspot" linkedscene="GS__7480" tx="367" tz="228" />
+    </scene>
+
+    <!--14-->    <!--11 on map err-->
+    <scene name="GS__7454" floor_id="Lobby">
+        <preview url="panos/GS__7454.tiles/preview.jpg" />
+        <image prealign="0|51.7|0">
+            <cube url="panos/GS__7454.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7455" style="floorspot" linkedscene="GS__7455" tx="17" tz="-433" />
+    </scene>
+
+    <!--14-->    <!--12 on map err-->
+    <scene name="GS__7455" floor_id="Lobby">
+        <preview url="panos/GS__7455.tiles/preview.jpg" />
+        <image prealign="0|-86|0">
+            <cube url="panos/GS__7455.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7456" style="floorspot" linkedscene="GS__7456" tx="-495" tz="-42" />
+    </scene>
+
+    <!--15-->    <!--14 on map err-->
+    <scene name="GS__7456" floor_id="Lobby">
+        <preview url="panos/GS__7456.tiles/preview.jpg" />
+        <image prealign="0|0|0">
+            <cube url="panos/GS__7456.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="stair" style="blank|stair" atv="-4" ath="-144"/>
+        <hotspot name="GS__7463" style="floorspot" linkedscene="GS__7463" tx="-29" tz="-384" />
+        <hotspot name="GS__7457" style="floorspot" linkedscene="GS__7457" tx="-15" tz="515" />
+    </scene>
+
+
+    <scene name="GS__7457" floor_id="Lobby">
+        <preview url="panos/GS__7457.tiles/preview.jpg" />
+        <image prealign="0|-115.3|0">
+            <cube url="panos/GS__7457.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7458" style="floorspot" linkedscene="GS__7458" tx="-789" tz="-229" />
+    </scene>
+
+
+    <scene name="GS__7458" floor_id="Lobby">
+        <preview url="panos/GS__7458.tiles/preview.jpg" />
+        <image prealign="0|248.0|0">
+            <cube url="panos/GS__7458.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7459" style="floorspot" linkedscene="GS__7459" tx="-782" tz="-268" />
+    </scene>
+
+
+    <scene name="GS__7459" floor_id="Lobby">
+        <preview url="panos/GS__7459.tiles/preview.jpg" />
+        <image prealign="0|-114.3|0">
+            <cube url="panos/GS__7459.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7460" style="floorspot" linkedscene="GS__7460" tx="-515" tz="-244" />
+    </scene>
+
+
+    <scene name="GS__7460" floor_id="Lobby">
+        <preview url="panos/GS__7460.tiles/preview.jpg" />
+        <image prealign="0|249.4|0">
+            <cube url="panos/GS__7460.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7461" style="floorspot" linkedscene="GS__7461" tx="-292" tz="-129" />
+    </scene>
+
+
+    <scene name="GS__7461" floor_id="Lobby">
+        <preview url="panos/GS__7461.tiles/preview.jpg" />
+        <image prealign="0|-116.6|0">
+            <cube url="panos/GS__7461.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="pull_station" style="poi|pull_station" atv="4" ath="-35"/>
+        <hotspot name="GS__7462" style="floorspot" linkedscene="GS__7462" tx="-458" tz="-217" />
+    </scene>
+
+    <!--outside-->    <!--21-->    <!--19 on map err-->
+    <scene name="GS__7462" floor_id="Lobby">
+        <preview url="panos/GS__7462.tiles/preview.jpg" />
+        <image prealign="0|-117.1|0">
+            <cube url="panos/GS__7462.tiles/pano_%s.jpg" />
+
+        </image>
+                   
+    </scene>
+
+    <!--stair-->    <!--22-->
+    <scene name="GS__7463" floor_id="Lobby" bridge="true">
+        <preview url="panos/GS__7463.tiles/preview.jpg" />
+        <image prealign="0|0|0">
+            <cube url="panos/GS__7463.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="stairwell" stair="3" style="blank" ath="-178"/>
+        <hotspot name="evac_chair" style="poi|evac_chair" atv="17" ath="-75"/>
+        <!--<hotspot name="evac_sign" style="poi|evac_sign" atv="17" ath="-75"/>-->
+    </scene>
+
+    <!--23-->    <!-- interior stair-->
+    <scene name="GS__7464" floor_id="Lobby" bridge="true">
+        <preview url="panos/GS__7464.tiles/preview.jpg" />
+        <image prealign="0|0|0">
+            <cube url="panos/GS__7464.tiles/pano_%s.jpg" />
+        </image>
+
+        <hotspot name="stairwell" stair="5" style="blank" ath="-172"/>
+    </scene>
+
+
+    <!--24-->    <!--links to 7-->
+    <scene name="GS__7465" floor_id="Lobby">
+        <preview url="panos/GS__7465.tiles/preview.jpg" />
+        <image prealign="0|-25.4|0">
+            <cube url="panos/GS__7465.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7464" style="floorspot" linkedscene="GS__7464" tx="-363" tz="-159" />
+        <hotspot name="GS__7466" style="floorspot" linkedscene="GS__7466" tx="-395" tz="167" />
+    </scene>
+
+
+    <scene name="GS__7466" floor_id="Lobby">
+        <preview url="panos/GS__7466.tiles/preview.jpg" />
+        <image prealign="0|-19|0">
+            <cube url="panos/GS__7466.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7467" style="floorspot" linkedscene="GS__7467" tx="-100" tz="210" />
+    </scene>
+
+    <!--26-->
+    <scene name="GS__7467" floor_id="Lobby">
+        <preview url="panos/GS__7467.tiles/preview.jpg" />
+        <image prealign="0|-22|0">
+            <cube url="panos/GS__7467.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7468" style="floorspot" linkedscene="GS__7468" tx="-401" tz="-193" />
+    </scene>
+
+    <!--27-->
+    <scene name="GS__7468" floor_id="Lobby">
+        <preview url="panos/GS__7468.tiles/preview.jpg" />
+        <image prealign="0|-26.3|0">
+            <cube url="panos/GS__7468.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="defib" style="poi|defib" atv="12" ath="153"/>
+        <hotspot name="GS__7469" style="floorspot" linkedscene="GS__7469" tx="-441" tz="-175" />
+    </scene>
+
+    <!--28-->
+    <scene name="GS__7469" floor_id="Lobby">
+        <preview url="panos/GS__7469.tiles/preview.jpg" />
+        <image prealign="0|66.5|0">
+            <cube url="panos/GS__7469.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7470" style="floorspot" linkedscene="GS__7470" tx="-407" tz="-183" />
+    </scene>
+
+    <!--29-->
+    <scene name="GS__7470" floor_id="Lobby">
+        <preview url="panos/GS__7470.tiles/preview.jpg" />
+        <image prealign="0|69.0|0">
+            <cube url="panos/GS__7470.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7471" style="floorspot" linkedscene="GS__7471" tx="109" tz="-221" />
+    </scene>
+
+
+    <scene name="GS__7471" floor_id="Lobby">
+        <preview url="panos/GS__7471.tiles/preview.jpg" />
+        <image prealign="0|67.7|0">
+            <cube url="panos/GS__7471.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7472" style="floorspot" linkedscene="GS__7472" tx="-194" tz="-85" />
+        <hotspot name="GS__7474" style="floorspot" linkedscene="GS__7474" tx="167" tz="-335" />
+    </scene>
+
+    <!--31-->
+    <scene name="GS__7472" floor_id="Lobby">
+        <preview url="panos/GS__7472.tiles/preview.jpg" />
+        <image prealign="0|-21.4|0">
+            <cube url="panos/GS__7472.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="stair" style="blank|stair" atv="-4" ath="14"/>
+        <hotspot name="GS__7473" style="floorspot" linkedscene="GS__7473" tx="-97" tz="192" />
+    </scene>
+
+    <!--stair-->    <!--32-->
+    <scene name="GS__7473" floor_id="Lobby" bridge="true">
+        <preview url="panos/GS__7473.tiles/preview.jpg" />
+        <image prealign="0|-22.3|0">
+            <cube url="panos/GS__7473.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="stairwell" stair="1" style="blank" ath="-23"/>
+    </scene>
+
+    <!--33-->
+    <scene name="GS__7474" floor_id="Lobby">
+        <preview url="panos/GS__7474.tiles/preview.jpg" />
+        <image prealign="0|157.3|0">
+            <cube url="panos/GS__7474.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7475" style="floorspot" linkedscene="GS__7475" tx="186" tz="-410" />
+    </scene>
+
+
+    <scene name="GS__7475" floor_id="Lobby">
+        <preview url="panos/GS__7475.tiles/preview.jpg" />
+        <image prealign="0|-118|0">
+            <cube url="panos/GS__7475.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7476" style="floorspot" linkedscene="GS__7476" tx="-583" tz="-271" />
+    </scene>
+
+
+    <scene name="GS__7476" floor_id="Lobby">
+        <preview url="panos/GS__7476.tiles/preview.jpg" />
+        <image prealign="0|-115|0">
+            <cube url="panos/GS__7476.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7477" style="floorspot" linkedscene="GS__7477" tx="-653" tz="-279" />
+    </scene>
+
+    <!--36-->
+    <scene name="GS__7477" floor_id="Lobby">
+        <preview url="panos/GS__7477.tiles/preview.jpg" />
+        <image prealign="0|-120|0">
+            <cube url="panos/GS__7477.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7478" style="floorspot" linkedscene="GS__7478" tx="-318" tz="-80" />
+    </scene>
+
+
+    <scene name="GS__7478" floor_id="Lobby">
+        <preview url="panos/GS__7478.tiles/preview.jpg" />
+        <image prealign="0|-115.4|0">
+            <cube url="panos/GS__7478.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7479" style="floorspot" linkedscene="GS__7479" tx="-312" tz="-88" />
+    </scene>
+
+    <!--38-->    <!--outside-->
+    <scene name="GS__7479" floor_id="Lobby">
+        <preview url="panos/GS__7479.tiles/preview.jpg" />
+        <image prealign="0|247.8|0">
+            <cube url="panos/GS__7479.tiles/pano_%s.jpg" />
+        </image>
+
+         <hotspot name="f2_assembly_vid" data="bxp_AA_vid" style="blank" fov="107" atv="0" ath="1324" next="f2_firefighter_vid"/>
+        <hotspot name="f2_firefighter_vid" data="bxp_FF_vid" style="blank" fov="107" atv="0" ath="1324" next="flr2_int_items"/>
+        <hotspot name="flr2_int_items" data="interface_items" style="blank" fov="115" atv="0" ath="1324" next="flr2_shu_menu"/>
+        <hotspot name="flr2_shu_menu" data="shuttle_menu" style="blank" fov="115" atv="0" ath="1324" next="flr2_shu_menu_info"/>
+        <hotspot name="flr2_shu_menu_info" data="shuttle_menu_info" style="blank" fov="115" atv="0" ath="1324" next="flr2_vid_lib"/>
+        <hotspot name="flr2_vid_lib" data="vid_lib" style="blank" fov="115" atv="0" ath="1324" next="flr2_vlib_info"/>
+        <hotspot name="flr2_vlib_info" data="vid_lib_info" style="blank" fov="115" atv="0" ath="1324" next="flr2_mini_map"/>
+        <hotspot name="flr2_mini_map" data="mini_map" style="blank" fov="115" atv="0" ath="1324" next="flr2_end_tour"/>
+        <hotspot name="flr2_end_tour" data="flr8_tour_over" style="blank" fov="115" atv="0" ath="1324"/>
+
+
+        <hotspot name="f5_assembly_vid" data="bxp_AA_vid" style="blank" fov="107" atv="0" ath="1324" next="f5_firefighter_vid"/>
+        <hotspot name="f5_firefighter_vid" data="bxp_FF_vid" style="blank" fov="107" atv="0" ath="1324" next="flr5_int_items"/>
+        <hotspot name="flr5_int_items" data="interface_items" style="blank" fov="115" atv="0" ath="1324" next="flr5_shu_menu"/>
+        <hotspot name="flr5_shu_menu" data="shuttle_menu" style="blank" fov="115" atv="0" ath="1324" next="flr5_shu_menu_info"/>
+        <hotspot name="flr5_shu_menu_info" data="shuttle_menu_info" style="blank" fov="115" atv="0" ath="1324" next="flr5_vid_lib"/>
+        <hotspot name="flr5_vid_lib" data="vid_lib" style="blank" fov="115" atv="0" ath="1324" next="flr5_vlib_info"/>
+        <hotspot name="flr5_vlib_info" data="vid_lib_info" style="blank" fov="115" atv="0" ath="1324" next="flr5_mini_map"/>
+        <hotspot name="flr5_mini_map" data="mini_map" style="blank" fov="115" atv="0" ath="1324" next="flr5_end_tour"/>
+        <hotspot name="flr5_end_tour" data="flr8_tour_over" style="blank" fov="115" atv="0" ath="1324"/>
+
+
+        <hotspot name="f8_assembly_vid" data="bxp_AA_vid" style="blank" fov="107" atv="0" ath="1324" next="f8_firefighter_vid"/>
+        <hotspot name="f8_firefighter_vid" data="bxp_FF_vid" style="blank" fov="107" atv="0" ath="1324" next="flr8_int_items"/>
+        <hotspot name="flr8_int_items" data="interface_items" style="blank" fov="115" atv="0" ath="1324" next="flr8_shu_menu"/>
+        <hotspot name="flr8_shu_menu" data="shuttle_menu" style="blank" fov="115" atv="0" ath="1324" next="flr8_shu_menu_info"/>
+        <hotspot name="flr8_shu_menu_info" data="shuttle_menu_info" style="blank" fov="115" atv="0" ath="1324" next="flr8_vid_lib"/>
+        <hotspot name="flr8_vid_lib" data="vid_lib" style="blank" fov="115" atv="0" ath="1324" next="flr8_vlib_info"/>
+        <hotspot name="flr8_vlib_info" data="vid_lib_info" style="blank" fov="115" atv="0" ath="1324" next="flr8_mini_map"/>
+        <hotspot name="flr8_mini_map" data="mini_map" style="blank" fov="115" atv="0" ath="1324" next="flr8_end_tour"/>
+        <hotspot name="flr8_end_tour" data="flr8_tour_over" style="blank" fov="115" atv="0" ath="1324"/>
+
+    </scene>
+
+    <!-- outide-->
+    <scene name="GS__7480" floor_id="Lobby">
+        <preview url="panos/GS__7480.tiles/preview.jpg" />
+        <image prealign="0|58.8|0">
+            <cube url="panos/GS__7480.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7483" style="floorspot" linkedscene="GS__7483" tx="0" tz="0" />
+    </scene>
+
+
+    <scene name="GS__7483" floor_id="Lobby">
+        <preview url="panos/GS__7483.tiles/preview.jpg" />
+        <image prealign="0|0|0">
+            <cube url="panos/GS__7483.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7484" style="floorspot" linkedscene="GS__7484" tx="0" tz="0" />
+    </scene>
+
+
+    <scene name="GS__7484" floor_id="Lobby">
+        <preview url="panos/GS__7484.tiles/preview.jpg" />
+        <image prealign="0|0|0">
+            <cube url="panos/GS__7484.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7485" style="floorspot" linkedscene="GS__7485" tx="0" tz="0" />
+    </scene>
+
+
+    <scene name="GS__7485" floor_id="Lobby">
+        <preview url="panos/GS__7485.tiles/preview.jpg" />
+        <image prealign="0|0|0">
+            <cube url="panos/GS__7485.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7486" style="floorspot" linkedscene="GS__7486" tx="0" tz="0" />
+    </scene>
+
+
+    <scene name="GS__7486" floor_id="Lobby">
+        <preview url="panos/GS__7486.tiles/preview.jpg" />
+        <image prealign="0|0|0">
+            <cube url="panos/GS__7486.tiles/pano_%s.jpg" />
+        </image>
+    </scene>
+
+
+    <!-- #endregion -->
+
+
+    <!-- 2nd Floor -->
+    <!-- #region -->
+    <!-- <scene name="GS__7373" floor_id="2">
+<preview url="panos/GS__7373.tiles/preview.jpg" />
+<image prealign="0|0|0">
+<cube url="panos/GS__7373.tiles/pano_%s.jpg" />
+</image>
+<hotspot name="GS__7374" style="floorspot" linkedscene="GS__7374" tx="0" tz="0" />
+</scene> -->
+
+
+    <scene name="GS__7374" floor_id="2">
+        <preview url="panos/GS__7374.tiles/preview.jpg" />
+        <image prealign="0|336|0">
+            <cube url="panos/GS__7374.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7375" style="floorspot" linkedscene="GS__7375" tx="-220" tz="513" />
+        <hotspot name="f2_tour_intro" data="bxp_intro_tour" style="blank" fov="120" atv="0" ath="-111" next="f2_exit_sign"/>
+    </scene>
+
+
+    <scene name="GS__7375" floor_id="2">
+        <preview url="panos/GS__7375.tiles/preview.jpg" />
+        <image prealign="1|245.1|0">
+            <cube url="panos/GS__7375.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7376" style="floorspot" linkedscene="GS__7376" tx="523" tz="253" />
+        <hotspot name="f2_exit_sign" data="bxp_exit_sign" style="blank" fov="61" atv="-9" ath="70" next="f2_pull"/>
+    </scene>
+
+    <!--46-->
+    <scene name="GS__7376" floor_id="2">
+        <preview url="panos/GS__7376.tiles/preview.jpg" />
+        <image prealign="0|153.2|0">
+            <cube url="panos/GS__7376.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="stair" style="blank|stair" atv="-2" ath="106"/>
+        <hotspot name="pull_station" style="poi|pull_station" atv="10" ath="95"/>
+        <hotspot name="fire_ext" style="poi|fire_ext" atv="2" ath="85"/>
+        <hotspot name="GS__7377" style="floorspot" linkedscene="GS__7377" tx="91" tz="-185" />
+        <hotspot name="GS__7379" style="floorspot" linkedscene="GS__7379" tx="386" tz="163" />
+        <hotspot name="f2_pull" data="bxp_pull" style="blank" fov="61" atv="13" ath="97" next="f2_stair_a"/>
+        <hotspot name="f2_stair_a" data="bxp_stair_2" style="blank" fov="115" atv="-1" ath="155" next="f2_fire_ext"/>
+    </scene>
+
+    <!--stair-->
+    <scene name="GS__7377" floor_id="2" bridge="true">
+        <preview url="panos/GS__7377.tiles/preview.jpg" />
+        <image prealign="0|147|0">
+            <cube url="panos/GS__7377.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="stairwell" stair="2" style="blank" ath="180"/>
+    </scene>
+
+    <!-- too dark
+<hotspot name="GS__7378" style="floorspot" linkedscene="GS__7378" tx="471" tz="211" />
+<scene name="GS__7378" floor_id="2">
+<preview url="panos/GS__7378.tiles/preview.jpg" />
+<image prealign="0|154.9|0">
+<cube url="panos/GS__7378.tiles/pano_%s.jpg" />
+</image>
+<hotspot name="GS__7379" style="floorspot" linkedscene="GS__7379" tx="227" tz="-517" />
+</scene>
+-->
+
+    <!-- PHOTO EDIT remove leg -->
+    <scene name="GS__7379" floor_id="2">
+        <preview url="panos/GS__7379.tiles/preview.jpg" />
+        <image prealign="0|154.90|0">
+            <cube url="panos/GS__7379.tiles/pano_%s.jpg" />
+        </image>
+
+        <hotspot name="GS__7380" style="floorspot" linkedscene="GS__7380" tx="227" tz="-517" />
+    </scene>
+
+
+    <scene name="GS__7380" floor_id="2">
+        <preview url="panos/GS__7380.tiles/preview.jpg" />
+        <image prealign="0|150.9|0">
+            <cube url="panos/GS__7380.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7381" style="floorspot" linkedscene="GS__7381" tx="233" tz="-513" />
+    </scene>
+
+
+    <scene name="GS__7381" floor_id="2">
+        <preview url="panos/GS__7381.tiles/preview.jpg" />
+        <image prealign="2|-112|0">
+            <cube url="panos/GS__7381.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7382" style="floorspot" linkedscene="GS__7382" tx="-461" tz="-225" />
+    </scene>
+
+
+    <scene name="GS__7382" floor_id="2">
+        <preview url="panos/GS__7382.tiles/preview.jpg" />
+        <image prealign="0|-112.0|0">
+            <cube url="panos/GS__7382.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7383" style="floorspot" linkedscene="GS__7383" tx="-487" tz="-169" />
+    </scene>
+
+
+    <scene name="GS__7383" floor_id="2">
+        <preview url="panos/GS__7383.tiles/preview.jpg" />
+        <image prealign="0|-19.4|0">`
+            <cube url="panos/GS__7383.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7384" style="floorspot" linkedscene="GS__7384" tx="-654" tz="-315" />
+    </scene>
+
+    <!--# PHOTO EDIT leg -->
+    <scene name="GS__7384" floor_id="2">
+        <preview url="panos/GS__7384.tiles/preview.jpg" />
+        <image prealign="0|65.4|0">
+            <cube url="panos/GS__7384.tiles/pano_%s.jpg" />
+        </image>
+
+        <hotspot name="GS__7385" style="floorspot" linkedscene="GS__7385" tx="-610" tz="-203" />
+        <hotspot name="GS__7388" style="floorspot" linkedscene="GS__7388" tx="83" tz="-692" />
+    </scene>
+
+
+    <scene name="GS__7385" floor_id="2">
+        <preview url="panos/GS__7385.tiles/preview.jpg" />
+        <image prealign="0|70.9|0">
+            <cube url="panos/GS__7385.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7386" style="floorspot" linkedscene="GS__7386" tx="-590" tz="-230" />
+    </scene>
+
+    <scene name="GS__7386" floor_id="2">
+        <preview url="panos/GS__7386.tiles/preview.jpg" />
+        <image prealign="0|161.2|0">
+            <cube url="panos/GS__7386.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="fire_ext" style="poi|fire_ext" atv="3" ath="-85"/>
+        <hotspot name="stair" style="blank|stair" atv="-4" ath="-56"/>
+        <hotspot name="pull_station" style="poi|pull_station" atv="13" ath="-71"/>
+        <hotspot name="GS__7387" style="floorspot" linkedscene="GS__7387" tx="-85" tz="203" />
+        <hotspot name="GS__7420" style="floorspot" linkedscene="GS__7420" tx="-372" tz="-162" />
+        <hotspot name="f2_fire_ext" data="bxp_fire_ext" style="blank" fov="76" atv="7" ath="273" next="f2_stair_b"/>
+    </scene>
+
+    <!--Stair-->
+    <scene name="GS__7387" floor_id="2" bridge="true">
+        <preview url="panos/GS__7387.tiles/preview.jpg" />
+        <image prealign="0|145.3|0">
+            <cube url="panos/GS__7387.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="stairwell" stair="1" style="blank" ath="-32"/>
+        <hotspot name="f2_evac" data="bxp_evac" style="blank" fov="120" atv="0" ath="328" next="f2_exit_bldg"/>
+
+        <hotspot name="f2_exit_bldg" data="f2_exit_bldg" style="blank" fov="120" atv="0" ath="320"/>
+        <hotspot name="f2_stair_b" data="bxp_stair_1" style="blank" fov="120" atv="0" ath="328" next="f2_evac"/>
+    </scene>
+
+    <scene name="GS__7388" floor_id="2">
+        <preview url="panos/GS__7388.tiles/preview.jpg" />
+        <image prealign="0|171|0">
+            <cube url="panos/GS__7388.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7389" style="floorspot" linkedscene="GS__7389" tx="36" tz="-440" />
+    </scene>
+
+
+    <scene name="GS__7389" floor_id="2">
+        <preview url="panos/GS__7389.tiles/preview.jpg" />
+        <image prealign="0|168.7|0">
+            <cube url="panos/GS__7389.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7390" style="floorspot" linkedscene="GS__7390" tx="18" tz="-260" />
+    </scene>
+
+
+    <scene name="GS__7390" floor_id="2">
+        <preview url="panos/GS__7390.tiles/preview.jpg" />
+        <image prealign="0|248.6|0">
+            <cube url="panos/GS__7390.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7391" style="floorspot" linkedscene="GS__7391" tx="-372" tz="-116" />
+    </scene>
+
+
+
+    <scene name="GS__7391" floor_id="2">
+        <preview url="panos/GS__7391.tiles/preview.jpg" />
+        <image prealign="0|-112.1|0">
+            <cube url="panos/GS__7391.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7410" style="floorspot" linkedscene="GS__7410" tx="135" tz="-324" />
+        <hotspot name="GS__7392" style="floorspot" linkedscene="GS__7392" tx="-352" tz="-120" />
+    </scene>
+
+
+    <scene name="GS__7392" floor_id="2">
+        <preview url="panos/GS__7392.tiles/preview.jpg" />
+        <image prealign="0|-117.2|0">
+            <cube url="panos/GS__7392.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7393" style="floorspot" linkedscene="GS__7393" tx="-250" tz="-135" />
+    </scene>
+
+
+    <scene name="GS__7393" floor_id="2">
+        <preview url="panos/GS__7393.tiles/preview.jpg" />
+        <image prealign="0|160.0|0">
+            <cube url="panos/GS__7393.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7394" style="floorspot" linkedscene="GS__7394" tx="254" tz="-531" />
+    </scene>
+
+
+    <scene name="GS__7394" floor_id="2">
+        <preview url="panos/GS__7394.tiles/preview.jpg" />
+        <image prealign="0|251.1|0">
+            <cube url="panos/GS__7394.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="stair" style="blank|stair" atv="-4" ath="-165"/>
+        <hotspot name="pull_station" style="poi|pull_station" atv="13" ath="-156"/>
+        <hotspot name="GS__7395" style="floorspot" linkedscene="GS__7395" tx="-237" tz="-100" />
+        <hotspot name="GS__7400" style="floorspot" linkedscene="GS__7400" tx="95" tz="-216" />
+    </scene>
+
+    <!--stair-->    <!-- links to floor 1-->
+    <scene name="GS__7395" floor_id="2">
+        <preview url="panos/GS__7395.tiles/preview.jpg" />
+        <image prealign="0|255|0">
+            <cube url="panos/GS__7395.tiles/pano_%s.jpg" />
+        </image>
+    </scene>
+
+    <!-- actualy lobby-->
+
+    <!--<hotspot name="GS__7396" style="floorspot" linkedscene="GS__7396" tx="67" tz="-234" />-->
+
+    <scene name="GS__7396" floor_id="2">
+        <preview url="panos/GS__7396.tiles/preview.jpg" />
+        <image prealign="0|0|0">
+            <cube url="panos/GS__7396.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7397" style="floorspot" linkedscene="GS__7397" tx="0" tz="0" />
+    </scene>
+
+
+    <scene name="GS__7397" floor_id="2">
+        <preview url="panos/GS__7397.tiles/preview.jpg" />
+        <image prealign="0|0|0">
+            <cube url="panos/GS__7397.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7398" style="floorspot" linkedscene="GS__7398" tx="0" tz="0" />
+    </scene>
+
+
+    <scene name="GS__7398" floor_id="2">
+        <preview url="panos/GS__7398.tiles/preview.jpg" />
+        <image prealign="0|0|0">
+            <cube url="panos/GS__7398.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7399" style="floorspot" linkedscene="GS__7399" tx="0" tz="0" />
+    </scene>
+
+
+    <scene name="GS__7399" floor_id="2">
+        <preview url="panos/GS__7399.tiles/preview.jpg" />
+        <image prealign="0|0|0">
+            <cube url="panos/GS__7399.tiles/pano_%s.jpg" />
+        </image>
+    </scene>
+    <!--end lobby stair kick-->
+
+    <scene name="GS__7400" floor_id="2">
+        <preview url="panos/GS__7400.tiles/preview.jpg" />
+        <image prealign="0|-110.9|0">
+            <cube url="panos/GS__7400.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7401" style="floorspot" linkedscene="GS__7401" tx="635" tz="268" />
+    </scene>
+
+
+    <scene name="GS__7401" floor_id="2">
+        <preview url="panos/GS__7401.tiles/preview.jpg" />
+        <image prealign="0|-109.3|0">
+            <cube url="panos/GS__7401.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7402" style="floorspot" linkedscene="GS__7402" tx="274" tz="-569" />
+        <hotspot name="GS__7413" style="floorspot" linkedscene="GS__7413" tx="295" tz="133" />
+    </scene>
+
+
+    <scene name="GS__7402" floor_id="2">
+        <preview url="panos/GS__7402.tiles/preview.jpg" />
+        <image prealign="0|157.6|0">
+            <cube url="panos/GS__7402.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7403" style="floorspot" linkedscene="GS__7403" tx="211" tz="-531" />
+    </scene>
+
+
+    <scene name="GS__7403" floor_id="2">
+        <preview url="panos/GS__7403.tiles/preview.jpg" />
+        <image prealign="0|152.5|0">
+            <cube url="panos/GS__7403.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7404" style="floorspot" linkedscene="GS__7404" tx="227" tz="-523" />
+    </scene>
+
+
+    <scene name="GS__7404" floor_id="2">
+        <preview url="panos/GS__7404.tiles/preview.jpg" />
+        <image prealign="0|161.2|0">
+            <cube url="panos/GS__7404.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7405" style="floorspot" linkedscene="GS__7405" tx="606" tz="218" />
+    </scene>
+
+
+    <scene name="GS__7405" floor_id="2">
+        <preview url="panos/GS__7405.tiles/preview.jpg" />
+        <image prealign="0|-110.5|0">
+            <cube url="panos/GS__7405.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7406" style="floorspot" linkedscene="GS__7406" tx="492" tz="188" />
+    </scene>
+
+
+    <scene name="GS__7406" floor_id="2">
+        <preview url="panos/GS__7406.tiles/preview.jpg" />
+        <image prealign="0|158.1|0">
+            <cube url="panos/GS__7406.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7407" style="floorspot" linkedscene="GS__7407" tx="235" tz="-556" />
+    </scene>
+
+
+    <scene name="GS__7407" floor_id="2">
+        <preview url="panos/GS__7407.tiles/preview.jpg" />
+        <image prealign="0|158.4|0">
+            <cube url="panos/GS__7407.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7408" style="floorspot" linkedscene="GS__7408" tx="225" tz="-582" />
+    </scene>
+
+
+    <scene name="GS__7408" floor_id="2">
+        <preview url="panos/GS__7408.tiles/preview.jpg" />
+        <image prealign="0|70.1|0">
+            <cube url="panos/GS__7408.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="stair" style="blank|stair" atv="-3" ath="-161"/>
+        <hotspot name="pull_station" style="poi|pull_station" atv="8" ath="-55"/>
+        <hotspot name="GS__7409" style="floorspot" linkedscene="GS__7409" tx="-212" tz="-75" />
+    </scene>
+
+    <!--stair-->
+    <scene name="GS__7409" floor_id="2">
+        <preview url="panos/GS__7409.tiles/preview.jpg" />
+        <image prealign="0|65.7|0">
+            <cube url="panos/GS__7409.tiles/pano_%s.jpg" />
+        </image>
+    </scene>
+
+
+    <scene name="GS__7410" floor_id="2">
+        <preview url="panos/GS__7410.tiles/preview.jpg" />
+        <image prealign="0|-22.6|0">
+            <cube url="panos/GS__7410.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7411" style="floorspot" linkedscene="GS__7411" tx="303" tz="-21" />
+    </scene>
+
+
+    <scene name="GS__7411" floor_id="2">
+        <preview url="panos/GS__7411.tiles/preview.jpg" />
+        <image prealign="0|0|0">
+            <cube url="panos/GS__7411.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7412" style="floorspot" linkedscene="GS__7412" tx="270" tz="-32" />
+    </scene>
+
+
+    <scene name="GS__7412" floor_id="2" bridge="true">
+        <preview url="panos/GS__7412.tiles/preview.jpg" />
+        <image prealign="0|0|0">
+            <cube url="panos/GS__7412.tiles/pano_%s.jpg" />
+        </image>
+
+        <hotspot name="stairwell" stair="5" style="blank" ath="-354"/>
+    </scene>
+
+
+    <scene name="GS__7413" floor_id="2">
+        <preview url="panos/GS__7413.tiles/preview.jpg" />
+        <image prealign="0|-105.7|0">
+            <cube url="panos/GS__7413.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="pull_station" style="poi|pull_station" atv="9" ath="113"/>
+        <hotspot name="stair" style="blank|stair" atv="-4" ath="-156"/>
+        <hotspot name="GS__7414" style="floorspot" linkedscene="GS__7414" tx="140" tz="-343" />
+        <hotspot name="GS__7416" style="floorspot" linkedscene="GS__7416" tx="616" tz="200" />
+    </scene>
+
+    <scene name="GS__7414" floor_id="2">
+        <preview url="panos/GS__7414.tiles/preview.jpg" />
+        <image prealign="0|158.0|0">
+            <cube url="panos/GS__7414.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7415" style="floorspot" linkedscene="GS__7415" tx="325" tz="-221" />
+    </scene>
+
+
+    <!--stair-->
+    <scene name="GS__7415" floor_id="2" bridge="true">
+        <preview url="panos/GS__7415.tiles/preview.jpg" />
+        <image prealign="0|156.4|0">
+            <cube url="panos/GS__7415.tiles/pano_%s.jpg" />
+        </image>
+
+        <hotspot name="stairwell" stair="3" style="blank" ath="-193"/>
+    </scene>
+
+
+    <scene name="GS__7416" floor_id="2">
+        <preview url="panos/GS__7416.tiles/preview.jpg" />
+        <image prealign="0|77.2|0">
+            <cube url="panos/GS__7416.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7417" style="floorspot" linkedscene="GS__7417" tx="257" tz="132" />
+    </scene>
+
+
+    <scene name="GS__7417" floor_id="2">
+        <preview url="panos/GS__7417.tiles/preview.jpg" />
+        <image prealign="0|-22.2|0">
+            <cube url="panos/GS__7417.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7418" style="floorspot" linkedscene="GS__7418" tx="205" tz="-602" />
+    </scene>
+
+
+    <scene name="GS__7418" floor_id="2">
+        <preview url="panos/GS__7418.tiles/preview.jpg" />
+        <image prealign="0|-18.2|0">
+            <cube url="panos/GS__7418.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7419" style="floorspot" linkedscene="GS__7419" tx="232" tz="-552" />
+    </scene>
+
+    <!-- symlink 7406-->
+    <scene name="GS__7419" floor_id="2">
+        <preview url="panos/GS__7419.tiles/preview.jpg" />
+        <image prealign="0|-24.6|0">
+            <cube url="panos/GS__7419.tiles/pano_%s.jpg" />
+        </image>
+    </scene>
+
+
+    <scene name="GS__7420" floor_id="2">
+        <preview url="panos/GS__7420.tiles/preview.jpg" />
+        <image prealign="0|-24.2|0">
+            <cube url="panos/GS__7420.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7421" style="floorspot" linkedscene="GS__7421" tx="-219" tz="458" />
+    </scene>
+
+
+    <scene name="GS__7421" floor_id="2">
+        <preview url="panos/GS__7421.tiles/preview.jpg" />
+        <image prealign="0|-25.0|0">
+            <cube url="panos/GS__7421.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7422" style="floorspot" linkedscene="GS__7422" tx="-246" tz="588" />
+    </scene>
+
+
+    <scene name="GS__7422" floor_id="2">
+        <preview url="panos/GS__7422.tiles/preview.jpg" />
+        <image prealign="0|-55.0|0">
+            <cube url="panos/GS__7422.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7423" style="floorspot" linkedscene="GS__7423" tx="557" tz="248" />
+        <hotspot name="defib" style="poi|defib" atv="6" ath="122"/>
+        <hotspot name="first_aid" style="poi|first_aid" atv="3" ath="102"/>
+    </scene>
+
+
+    <scene name="GS__7423" floor_id="2">
+        <preview url="panos/GS__7423.tiles/preview.jpg" />
+        <image prealign="0|248.7|0">
+            <cube url="panos/GS__7423.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7424" style="floorspot" linkedscene="GS__7424" tx="447" tz="190" />
+    </scene>
+
+
+    <scene name="GS__7424" floor_id="2">
+        <preview url="panos/GS__7424.tiles/preview.jpg" />
+        <image prealign="0|-116.4|0">
+            <cube url="panos/GS__7424.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7425" style="floorspot" linkedscene="GS__7425" tx="654" tz="293" />
+    </scene>
+
+
+    <scene name="GS__7425" floor_id="2">
+        <preview url="panos/GS__7425.tiles/preview.jpg" />
+        <image prealign="0|-116.8|0">
+            <cube url="panos/GS__7425.tiles/pano_%s.jpg" />
+        </image>
+    </scene>
+
+
+    <!-- #endregion -->
+
+    <!-- 5th Floor -->
+    <!-- #region -->
+    <!-- <scene name="GS__7362" floor_id="5">
+<preview url="panos/GS__7362.tiles/preview.jpg" />
+<image prealign="0|0|0">
+<cube url="panos/GS__7362.tiles/pano_%s.jpg" />
+</image>
+<hotspot name="GS__7363" style="floorspot" linkedscene="GS__7363" tx="0" tz="0" />
+</scene> -->
+
+
+    <scene name="GS__7363" floor_id="5">
+        <preview url="panos/GS__7363.tiles/preview.jpg" />
+        <image prealign="0|-201.6|0">
+            <cube url="panos/GS__7363.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7364" style="floorspot" linkedscene="GS__7364" tx="-210" tz="517" />
+        <hotspot name="GS__7367" style="floorspot" linkedscene="GS__7367" tx="221" tz="-532" />
+        <hotspot name="f5_intro_tour" data="bxp_intro_tour" style="blank" fov="120" atv="0" ath="-112" next="f5_exit_sign"/>
+    </scene>
+
+
+    <scene name="GS__7364" floor_id="5">
+        <preview url="panos/GS__7364.tiles/preview.jpg" />
+        <image prealign="2|-115.8|0">
+            <cube url="panos/GS__7364.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7365" style="floorspot" linkedscene="GS__7365" tx="480" tz="227" />
+        <hotspot name="f5_exit_sign" data="bxp_exit_sign" style="blank" fov="28" atv="-9" ath="65" next="f5_pull"/>
+    </scene>
+
+
+    <scene name="GS__7365" floor_id="5">
+        <preview url="panos/GS__7365.tiles/preview.jpg" />
+        <image prealign="0|-25.3|0">
+            <cube url="panos/GS__7365.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="fire_ext" style="poi|fire_ext" atv="12" ath="-56"/>
+        <hotspot name="stair" style="blank|stair" atv="-4" ath="115"/>
+        <hotspot name="pull_station" style="poi|pull_station" atv="17" ath="115"/>
+        <hotspot name="GS__7366" style="floorspot" linkedscene="GS__7366" tx="98" tz="-212" />
+
+        <hotspot name="f5_pull" data="bxp_pull" style="blank" fov="84" atv="24" ath="115" next="f5_stair_2"/>
+        <hotspot name="f5_stair_2" data="bxp_stair_2" style="blank" fov="115" atv="0" ath="156" next="f5_fire_ext"/>
+
+    </scene>
+
+    <!--stair-->
+    <scene name="GS__7366" floor_id="5" bridge="true">
+        <preview url="panos/GS__7366.tiles/preview.jpg" />
+        <image prealign="0|-25.6|0">
+            <cube url="panos/GS__7366.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="stairwell" stair="2" style="blank" ath="155"/>
+    </scene>
+
+
+    <scene name="GS__7367" floor_id="5">
+        <preview url="panos/GS__7367.tiles/preview.jpg" />
+        <image prealign="0|67.7|0">
+            <cube url="panos/GS__7367.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7368" style="floorspot" linkedscene="GS__7368" tx="-586" tz="-235" />
+    </scene>
+
+
+    <scene name="GS__7368" floor_id="5">
+        <preview url="panos/GS__7368.tiles/preview.jpg" />
+        <image prealign="0|70.9|0">
+            <cube url="panos/GS__7368.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7369" style="floorspot" linkedscene="GS__7369" tx="-600" tz="-247" />
+    </scene>
+
+
+    <scene name="GS__7369" floor_id="5">
+        <preview url="panos/GS__7369.tiles/preview.jpg" />
+        <image prealign="0|63.8|0">
+            <cube url="panos/GS__7369.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7370" style="floorspot" linkedscene="GS__7370" tx="-355" tz="-133" />
+    </scene>
+
+
+    <scene name="GS__7370" floor_id="5">
+        <preview url="panos/GS__7370.tiles/preview.jpg" />
+        <image prealign="0|70.2|0">
+            <cube url="panos/GS__7370.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7371" style="floorspot" linkedscene="GS__7371" tx="-309" tz="-126" />
+    </scene>
+
+
+    <scene name="GS__7371" floor_id="5">
+        <preview url="panos/GS__7371.tiles/preview.jpg" />
+        <image prealign="0|-22.2|0">
+            <cube url="panos/GS__7371.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="fire_ext" style="poi|fire_ext" atv="4" ath="-84"/>
+        <hotspot name="stair" style="blank|stair" atv="-4" ath="-67"/>
+        <hotspot name="pull_station" style="poi|pull_station" atv="15" ath="-69"/>
+        <hotspot name="GS__7372" style="floorspot" linkedscene="GS__7372" tx="-82" tz="182" />
+        <hotspot name="f5_fire_ext" data="bxp_fire_ext" style="blank" fov="81" atv="11" ath="271" next="f5_stair_1"/>
+        <hotspot name="f5_stair_1" data="bxp_stair_1" style="blank" fov="110" atv="2" ath="339" next="f5_evac"/>
+    </scene>
+
+    <!--stair-->
+    <scene name="GS__7372" floor_id="5" bridge="true">
+        <preview url="panos/GS__7372.tiles/preview.jpg" />
+        <image prealign="0|-20.2|0">
+            <cube url="panos/GS__7372.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="f5_evac" data="bxp_evac" style="blank" fov="120" atv="0" ath="340" next="f5_exit_bldg"/>
+        <hotspot name="f5_exit_bldg" data="f5_exit_bldg" style="blank" fov="120" atv="0" ath="340"/>
+        <hotspot name="stairwell" stair="1" style="blank" ath="-20"/>
+    </scene>
+
+
+    <!-- #endregion -->
+
+    <!-- 8th Floor -->
+    <!-- #region -->
+    <!-- <scene name="GS__7426" floor_id="8">
+<preview url="panos/GS__7426.tiles/preview.jpg" />
+<image prealign="0|0|0">
+<cube url="panos/GS__7426.tiles/pano_%s.jpg" />
+</image>
+<hotspot name="GS__7427" style="floorspot" linkedscene="GS__7427" tx="0" tz="0" />
+</scene> -->
+
+
+    <scene name="GS__7427" floor_id="8">
+        <preview url="panos/GS__7427.tiles/preview.jpg" />
+        <image prealign="0|-28.0|0">
+            <cube url="panos/GS__7427.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7428" style="floorspot" linkedscene="GS__7428" tx="-233" tz="520" />
+        <hotspot name="GS__7431" style="floorspot" linkedscene="GS__7431" tx="220" tz="-582" />
+        <hotspot name="f8_intro_tour" data="bxp_intro_tour" style="blank" fov="131" atv="1" ath="-112" next="f8_EXIT_sign"/>
+
+
+    </scene>
+
+
+    <scene name="GS__7428" floor_id="8">
+        <preview url="panos/GS__7428.tiles/preview.jpg" />
+        <image prealign="0|-20.6|0">
+            <cube url="panos/GS__7428.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7429" style="floorspot" linkedscene="GS__7429" tx="478" tz="198" />
+        <hotspot name="f8_Exit_sign" data="bxp_exit_sign" style="blank" fov="39" atv="-10" ath="437" next="f8_pull"/>
+    </scene>
+
+
+    <scene name="GS__7429" floor_id="8">
+        <preview url="panos/GS__7429.tiles/preview.jpg" />
+        <image prealign="0|-19.8|0">
+            <cube url="panos/GS__7429.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="fire_ext" style="poi|fire_ext" atv="2" ath="95"/>
+        <hotspot name="stair" style="blank|stair" atv="-4" ath="113"/>
+        <hotspot name="pull_station" style="poi|pull_station" atv="15" ath="112"/>
+        <hotspot name="GS__7430" style="floorspot" linkedscene="GS__7430" tx="101" tz="-173" />
+        <hotspot name="f8_pull" data="bxp_pull" style="blank" fov="88" atv="12" ath="117" next="f8_stair_2"/>
+        <hotspot name="f8_stair_2" data="bxp_stair_2" style="blank" fov="120" atv="3" ath="156" next="f8_defib"/>
+    </scene>
+
+    <!--stair-->
+    <scene name="GS__7430" floor_id="8" bridge="true">
+        <preview url="panos/GS__7430.tiles/preview.jpg" />
+        <image prealign="0|-21.8|0">
+            <cube url="panos/GS__7430.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="stairwell" stair="2" style="blank" ath="160"/>
+    </scene>
+
+
+    <scene name="GS__7431" floor_id="8">
+        <preview url="panos/GS__7431.tiles/preview.jpg" />
+        <image prealign="0|-22.2|0">
+            <cube url="panos/GS__7431.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7432" style="floorspot" linkedscene="GS__7432" tx="52" tz="-471" />
+    </scene>
+
+
+    <scene name="GS__7432" floor_id="8">
+        <preview url="panos/GS__7432.tiles/preview.jpg" />
+        <image prealign="0|-65.7|0">
+            <cube url="panos/GS__7432.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7433" style="floorspot" linkedscene="GS__7433" tx="-554" tz="-211" />
+    </scene>
+
+
+    <scene name="GS__7433" floor_id="8">
+        <preview url="panos/GS__7433.tiles/preview.jpg" />
+        <image prealign="0|-68.1|0">
+            <cube url="panos/GS__7433.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7434" style="floorspot" linkedscene="GS__7434" tx="-107" tz="205" />
+        <hotspot name="f8_defib" data="bxp_defib" style="blank" fov="60" atv="4" ath="652" next="f8_fire_ext"/>
+    </scene>
+
+
+    <scene name="GS__7434" floor_id="8">
+        <preview url="panos/GS__7434.tiles/preview.jpg" />
+        <image prealign="0|-19.0|0">
+            <cube url="panos/GS__7434.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="defib" style="poi|defib" atv="-0" ath="-113"/>
+        <hotspot name="GS__7435" style="floorspot" linkedscene="GS__7435" tx="-91" tz="204" />
+    </scene>
+
+
+    <scene name="GS__7435" floor_id="8">
+        <preview url="panos/GS__7435.tiles/preview.jpg" />
+        <image prealign="0|-23.8|0">
+            <cube url="panos/GS__7435.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7436" style="floorspot" linkedscene="GS__7436" tx="-563" tz="-216" />
+    </scene>
+
+
+    <scene name="GS__7436" floor_id="8">
+        <preview url="panos/GS__7436.tiles/preview.jpg" />
+        <image prealign="0|70.1|0">
+            <cube url="panos/GS__7436.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7437" style="floorspot" linkedscene="GS__7437" tx="-386" tz="-136" />
+    </scene>
+
+
+    <scene name="GS__7437" floor_id="8">
+        <preview url="panos/GS__7437.tiles/preview.jpg" />
+        <image prealign="0|64.6|0">
+            <cube url="panos/GS__7437.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="GS__7438" style="floorspot" linkedscene="GS__7438" tx="-254" tz="-92" />
+    </scene>
+
+
+    <scene name="GS__7438" floor_id="8">
+        <preview url="panos/GS__7438.tiles/preview.jpg" />
+        <image prealign="0|-21.4|0">
+            <cube url="panos/GS__7438.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="fire_ext" style="poi|fire_ext" atv="4" ath="-82"/>
+        <hotspot name="stair" style="blank|stair" atv="-6" ath="-58"/>
+        <hotspot name="pull_station" style="poi|pull_station" atv="14" ath="-63"/>
+        <hotspot name="GS__7439" style="floorspot" linkedscene="GS__7439" tx="-84" tz="176" />
+        <hotspot name="f8_fire_ext" data="bxp_fire_ext" style="blank" fov="102" atv="8" ath="642" next="f8_stair_1"/>
+    </scene>
+
+    <!--Stair-->
+    <scene name="GS__7439" floor_id="8" bridge="true">
+        <preview url="panos/GS__7439.tiles/preview.jpg" />
+        <image prealign="0|-17.0|0">
+            <cube url="panos/GS__7439.tiles/pano_%s.jpg" />
+        </image>
+        <hotspot name="stairwell" stair="1" style="blank" ath="-20"/>
+        <hotspot name="f8_evac" data="bxp_evac" style="blank" fov="120" atv="-1" ath="703" next="f8_exit_bldg"/>
+        <hotspot name="f8_exit_bldg" style="blank" fov="120" atv="-1" ath="703" />
+        <hotspot name="f8_stair_1" data="bxp_stair_1" style="blank" fov="120" atv="3" ath="156" next="f8_evac"/>
+    </scene>
+
+
+    <!-- #endregion -->
+
+    <include url="project_data.xml" />
+</krpano>

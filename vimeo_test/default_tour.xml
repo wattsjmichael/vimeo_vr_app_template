@@ -1,0 +1,453 @@
+<krpano>
+
+
+
+    <data object="tour" name="start_tour" type="html" pause="true" say="Welcome to the 11911 Freedom Life Safety Training. You can start the tour right away or take a quick tutorial"><![CDATA[
+        <div class="flex-item" id="close_me" style="padding:1em;text-align:center;">
+            <span style="font-size:1.8em;line-height:1.2em;">5404 Wisconsin Safety Training</span><br>
+            <div>
+             
+              
+            </div>
+            <div style="font-size:1.5em;line-height:1em;color:cyan;padding-top:1em;cursor:pointer;" data-next="pause_play" data-teleport="true" class="branch">Click Here for a Quick Tutorial on How to Use this Tool</div>
+            <div style="font-size:1.5em;line-height:1em;color:cyan;padding-top:1em;cursor:pointer;" data-next="floor_chooser" data-teleport="true" class="branch">Click Here to Start the Tour</div>
+           
+        </div>
+           <span style="line-height:1.3em">
+                    </br></br>It is highly recommended to take the tutorial if this is your first time using the program.
+                </span>
+	]]>    </data>
+
+    <!-- INTERFACE ELEMENT TOUR-->
+
+    <data object="tour" name="pause_play" type="interface" say="Use the pause play button to control media playback" el="tour_control_bg" x="100" y="-106" r="-160"><![CDATA[
+        <span style="color:white">Pause / Play</span>
+        <span>Fast Forward and Rewind</span>
+        <span>Tour Home</span>
+        <span>Tour On / Off</span>
+	]]>    </data>
+    <data object="tour" name="rewind" type="interface" say="Use the fast forward and rewind buttons to review previously viewed steps in the tour" el="tour_ffrew_left_bg" x="-30" y="-106" r="160"><![CDATA[
+        <span>Pause / Play</span>
+        <span style="color:white">Fast Forward and Rewind</span>
+        <span>Tour Home</span>
+        <span>Tour On / Off</span>
+	]]>    </data>
+    <data object="tour" name="tour_home" type="interface" say="Use the tour home button to return to the beginning of the tour" el="home_button" x="10" y="40" r="-40"><![CDATA[
+        <span>Pause / Play</span>
+        <span>Fast Forward and Rewind</span>
+        <span style="color:white">Tour Home</span>
+        <span>Tour On / Off</span>
+	]]>    </data>
+    <data object="tour" name="tour_toggle" type="interface" say="Toggle the tour on and off at any time to enter explore mode. Your progress will be saved automatically" el="tour_button" x="0" y="40" r="0"><![CDATA[
+        <span>Pause / Play</span>
+        <span>Fast Forward and Rewind</span>
+        <span>Tour Home</span>
+        <span style="color:white">Tour On / Off</span>
+	]]>    </data>
+    <data object="tour" name="hardware_chooser" type="html" say="Select If You Are On Mobile or Desktop" pause="true"><![CDATA[
+
+        <div id="overlay-content">
+            <div class="flex-container bg-gradient">
+                <div class="row fadeIn animated">
+                <span style="font-size:1.5em;line-height:1.5em;text-align:center;">Select If You Are On Mobile or Desktop. </span><br>
+                    <table>
+                        <tr>
+                            <td class="branch border" data-next="desktop_intro" data-teleport="true" style="font-size:2em;">
+                              Desktop
+                            </td>
+                            <td></td>
+                            <td class="branch border" data-teleport="true" data-next="mobile_intro" style="font-size:2em;">
+                               Mobile
+                          </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+	]]>    </data>
+
+    <data object="tour" name="desktop_intro" type="html" say="Hold down your left mouse button to move the camera around"><![CDATA[
+
+        <div id="overlay-content">
+            <div class="flex-container bg-gradient">
+                <div class="row fadeIn animated">
+                <span style="font-size:1.75em;line-height:1.5em;text-align:center;">Hold down your left mouse button to move the camera around</span><br>
+                <img src="images/lmb_down.png"/>
+                </div>
+            </div>
+        </div>
+
+	]]>    </data>
+
+
+    <data object="tour" name="desk_zoom" type="html" say="Scroll mouse wheel up or down to zoom."><![CDATA[
+
+        <div id="overlay-content">
+            <div class="flex-container bg-gradient">
+                <div class="row fadeIn animated">
+                <span style="font-size:1.75em;line-height:1.5em;text-align:center;">Scroll mouse wheel up or down to zoom.</span><br>
+                <img src="images/scroll_mouse.png"/>
+                </div>
+            </div>
+        </div>
+
+	]]>    </data>
+
+    <data object="tour" name="desk_hud" type="html" say="Use the Emergency Equipment Heads Up Display to find emergency equipment  in the current location. The icons will light up when life safety items are nearby. When an icon is lit, you can click on it to automatically face the life safety item."><![CDATA[
+
+        <div id="overlay-content">
+            <div class="flex-container bg-gradient">
+                <div class="row fadeIn animated">
+                <span style="font-size:1.25em;line-height:1em;text-align:center;">Use the Emergency Equipment Heads Up Display to find emergency equipment in the current location. The icons will light up when life safety items are nearby. When an icon is lit, you can click on it to automatically face the life safety item.</span><br>
+                <img src="images/hud.png"/>
+                </div>
+            </div>
+        </div>
+
+	]]>    </data>
+
+
+    <data object="tour" name="desk_portals" type="html" say="Click the arrows to select the direction you would like to go"><![CDATA[
+
+        <div id="overlay-content">
+            <div class="flex-container bg-gradient">
+                <div class="row fadeIn animated">
+                <span style="font-size:1.75em;line-height:1.5em;text-align:center;">Click the arrows to select the direction you would like to go </span><br>
+                <img src="images/arrow_tut.png"/>
+                </div>
+            </div>
+        </div>
+
+	]]>    </data>
+
+    <data object="tour" name="mobile_intro" type="html" say="With 1 finger, drag around the screen to move the camera"><![CDATA[
+
+        <div id="overlay-content">
+            <div class="flex-container bg-gradient">
+                <div class="row fadeIn animated">
+                <span style="font-size:1.75em;line-height:1.5em;text-align:center;">With 1 finger, drag around the screen to move the camera</span><br>
+                <img src="images/swipe_mob.png" style="width:25%"/>
+                </div>
+            </div>
+        </div>
+
+	]]>    </data>
+
+    <data object="tour" name="mobile_zoom" type="html" say="Pinch the screen to zoom in and out"><![CDATA[
+
+        <div id="overlay-content">
+            <div class="flex-container bg-gradient">
+                <div class="row fadeIn animated">
+                <span style="font-size:1.75em;line-height:1.5em;text-align:center;">Pinch the screen to zoom in and out</span><br>
+                <img src="images/pinch_mobile.png" style="width:25%"/>
+                </div>
+            </div>
+        </div>
+
+	]]>    </data>
+
+    <data object="tour" name="mobile_pinch" type="html" say="Pinch the screen to zoom in and out"><![CDATA[
+
+        <div id="overlay-content">
+            <div class="flex-container bg-gradient">
+                <div class="row fadeIn animated">
+                <span style="font-size:1.75em;line-height:1.5em;text-align:center;">Pinch the screen to zoom in and out</span><br>
+                <img src="images/pinch_mobile.png" />
+                </div>
+            </div>
+        </div>
+
+	]]>    </data>
+
+    <data object="tour" name="mobile_hud" type="html" say="Use the Emergency Equipment Heads Up Display to find emergency equipment in the current location. The icons will light up when life safety items are nearby. When an icon is lit, you can tap on it to automatically face the life safety item."><![CDATA[
+
+        <div id="overlay-content">
+            <div class="flex-container bg-gradient">
+                <div class="row fadeIn animated">
+                <span style="font-size:1.25em;line-height:1em;text-align:center;">Use the Emergency Equipment Heads Up Display to find emergency equipment in the current location. The icons will light up when life safety items are nearby. When an icon is lit, you can tap on it to automatically face the life safety item.</span><br>
+                <img src="images/hud.png"/>
+                </div>
+            </div>
+        </div>
+
+	]]>    </data>
+
+    <data object="tour" name="mobile_portal" type="html" say="Tap the arrow to move around the model"><![CDATA[
+
+        <div id="overlay-content">
+            <div class="flex-container bg-gradient">
+                <div class="row fadeIn animated">
+                <span style="font-size:1.75em;line-height:1.5em;text-align:center;">Tap the arrow to move around the model</span><br>
+                <img src="images/arrow_tut.png" />
+                </div>
+            </div>
+        </div>
+
+	]]>    </data>
+
+    <data object="tour" name="next_ani" type="html" say="Select the appropriate tour based on what floor you occupy. " pause="true"><![CDATA[
+
+        <div id="overlay-content">
+            <div class="flex-container bg-gradient">
+                
+                <img src="hotspots/next_animation.png"; "animation: myAnim 2s ease 0s infinite normal forwards"; ></div><br>
+                 
+                
+            </div>
+        </div>
+
+	]]>    </data>
+
+    
+
+    <data object="tour" name="floor_chooser" type="video"><![CDATA[
+         {"id": "347119375"}
+	]]>    </data>
+
+    <data object="tour" name="second_vid" type="video"><![CDATA[
+        {"id": "925917171"}
+	]]>    </data>
+
+  
+
+<!-- floor 8 -->
+
+    <!--COMMON STOPS-->
+    <!-- <data object="tour" name="tour_intro" type="voice" say="This virtual reality tour will guide you through the building and teach you how to stay safe in an emergency."><![CDATA[ This virtual reality tour will guide you through the building and teach you how to stay safe in an emergency.]]></data>
+<data object="tour" name="flr8_intro_tour" type="voice" say="Let's take a quick tour of your floor to locate the stairwells and life safety equipment. First let's head to Stairwell A."><![CDATA[
+    Let's take a quick tour of your floor to locate the stairwells and life safety equipment. First let's head to Stairwell A.
+    ]]></data>
+
+    <data object="tour" name="tour_quick_look" type="voice" say="Let's take a quick tour of your building to locate the building exits and life safety equipment.  We'll start at the main building entrance."><![CDATA[ Let's take a quick tour of your building to locate the building exits and life safety equipment.  We'll start at the main building entrance.]]></data>
+
+    <data object="tour" name="tour_head" type="voice" say="First, let's head inside and stop at the safety features near the reception desk."><![CDATA[ First, let's head inside and stop at the safety features near the reception desk.]]></data>
+
+    <data object="tour" name="tour_exit" type="voice" say="Exit doors are clearly marked with an illuminated sign."><![CDATA[ Exit doors are clearly marked with an illuminated sign.]]></data>
+
+    <data object="tour" name="tour_pull" type="placard" say="Manual pull stations will put the entire building into alarm and notify the Fire Department. "><![CDATA[Manual pull stations will put the entire building into alarm and notify the Fire Department.<br></br><img src="images/pull_station_web.jpg" />]]></data>
+
+    <data object="tour" name="tour_fire_ext" type="placard" say="Fire extinguishers are located throughout the building. After this tour is over, click on one to learn how to use it.  Next we will stop at a First Aid Station"><![CDATA[Fire extinguishers are located throughout the building. After this tour is over, click on one to learn how to use it.  Next we will stop at a First Aid Station<br></br><img src="images/fire_extinguisher.jpg" />]]></data>
+
+    <data object="tour" name="tour_aed" type="placard" say="This automated external defibrillator (A E D) comes with step-by-step instructions should you ever need to use it. "><![CDATA[This automated external defibrillator (AED) comes with step-by-step instructions should you ever need to use it. <br></br><img src="images/aed.jpg" />]]></data>
+
+    <data object="tour" name="tour_first_aid" type="voice" say="This First Aid Station contains basic supplies for minor conditions. Please seek professional medical help for serious injuries or ailments.  Next we will move towards the two exits on the west side of the building."><![CDATA["This First Aid Station contains basic supplies for minor conditions. Please seek professional medical help for serious injuries or ailments.  Next we will move towards the two exits on the west side of the building."]]></data>
+
+  
+    <data object="tour" name="tour_evac" type="voice" say="Should you ever need to evacuate the building, head to the nearest stairwell, move to the ground level and out, then proceed to your designated primary external assembly area."><![CDATA[ Should you ever need to evacuate the building, head to the nearest stairwell, move to the ground level and out, then proceed to your designated primary external assembly area.]]></data>
+
+    <data object="tour" name="tour_west_exit" type="voice" say="This door exits out into the west parking lot."><![CDATA[ This door exits out into the west parking lot.]]></data>
+
+    <data object="tour" name="tour_west_wp" type="passthrough"><![CDATA[]]></data>
+
+    <data object="tour" name="tour_west_exit_war" type="voice" say="This door also exits out into the west parking lot.  Next we will stop at the Col. Bro Dess H. Hartley Jr. War Room."><![CDATA[ This door also exits out into the west parking lot.  Next we will stop at the Col. Brodes H. Hartley Jr. War Room.]]></data>
+
+    <data object="tour" name="tour_cc" type="voice" say="This room is utilized as the command center during emergencies across the country."><![CDATA[ This room is utilized as the command center during emergencies across the country.]]></data>
+
+    <data object="tour" name="tour_key_west" type="voice" say="The Key West Wellness room is one of two designated shelter-in-place locations identified by the Safey First Decals above the door."><![CDATA[ The Key West Wellness room is one of two designated shelter-in-place locations identified by the Safey First Decals above the door.]]></data>
+
+    <data object="tour" name="tour_stretcher" type="voice" say="The wellness room contains a folding stretcher under the couch and first aid kit inside the cabinet. Next Let's head to the south building exit."><![CDATA[ The wellness room contains a folding stretcher under the couch and first aid kit inside the cabinet. Next let's head to the south building exit.]]></data>
+
+    <data object="tour" name="tour_south" type="voice" say="This door exits out into the south parking lot next to the EV charging stations.  Next we will stop at HCN Fit. "><![CDATA[ This door exits out into the south parking lot next to the EV charging stations.  Next we will stop at HCN Fit. ]]></data>
+
+    <data object="tour" name="tour_fit" type="voice" say="Inside HCN Fit there is a AED, fire extinguisher, manual pull station, and a door that exits out the southwest corner of the building."><![CDATA[ Inside HCN Fit there is a AED, fire extinguisher, manual pull station, and a door that exits out the southwest corner of the building.]]></data>
+
+    <data object="tour" name="tour_shortcut" type="voice" say="Let's take a shortcut to the plaza and stop at the other shelter-in-place location."><![CDATA[ Let's take a shortcut to the plaza and stop at the other shelter-in-place location.]]></data>
+
+    <data object="tour" name="tour_sobe" type="voice" say="Sobay Boardroom is the other option for taking shelter. A folding stretcher is located behind the cabinet."><![CDATA[ Sobe Boardroom is the other option for taking shelter. A folding stretcher is located behind the cabinet.]]></data>
+
+    <data object="tour" name="tour_out_aed" type="voice" say="In between the Copier Room and Sobay Boardroom is another AED."><![CDATA[ In between the Copier Room and Sobe Boardroom is another AED.]]></data>
+
+    <data object="tour" name="tour_copier" type="voice" say="In the Copier Room is a First Aid Station."><![CDATA[ In the Copier Room is a First Aid Station.]]></data>
+
+    <data object="tour" name="tour_around_fire" type="voice" say="Also nearby this shelter-in-place location is a Fire Extinguisher."><![CDATA[ Also nearby this shelter-in-place location is a Fire Extinguisher.]]></data>
+
+    <data object="tour" name="tour_return" type="voice" say="Let's return to the reception desk and conclude the tour at the assembly area."><![CDATA[ Let's return to the reception desk and conclude the tour at the assembly area.]]></data>
+
+    <data object="tour" name="tour_wp" type="passthrough"><![CDATA[]]></data>
+
+   <data object="tour" name="continue" type="html" pause="true" say="Click Here to Teleport to the Assembly Area"><![CDATA[<span style="font-size:2em;line-height:1em;"<br><div style="font-size:1.5em;line-height:1em;color:cyan;padding-top:1em;text-align:center" data-teleport="true" class="branch" data-next="s7_as">Click Here to Teleport to the Assembly Area
+    <br></br><img class="next_arrow" src="hotspots/next_cont_c.png" />
+    </div></span>]]></data>
+
+    <data object="tour" name="tour_evac" type="voice" say="Should you ever need to evacuate the building, head to the nearest exit, then proceed to your designated primary external assembly area."><![CDATA[ Should you ever need to evacuate the building, head to the nearest exit, then proceed to your designated primary external assembly area.]]></data>
+
+    <data object="tour" name="tour_assemb" type="voice" say="The assembly area is located in the parking lot just north of the building."><![CDATA[ The assembly area is located in the parking lot just north of the building.]]></data> -->
+
+    <data object="tour" name="bxp_intro_tour" type="voice" say="Let's take a quick tour of your floor to locate the stairwells and life safety equipment. First let's head to Stairwell 1."><![CDATA[ Let's take a quick tour of your floor to locate the stairwells and life safety equipment. First let's head to Stairwell 1.]]></data>
+
+    <data object="tour" name="bxp_exit_sign" type="voice" say="Exit paths are clearly marked with an illuminated sign."><![CDATA[ Exit paths are clearly marked with an illuminated sign.]]></data>
+
+    <data object="tour" name="bxp_pull" type="placard" say="Manual pull stations will put the entire building into alarm and notify the fire department."><![CDATA[
+            <img src="images/pull_station.jpg" />
+            <br></br>
+            Manual pull stations will put the entire building into alarm and notify the fire department.
+        ]]></data>
+
+    <data object="tour" name="bxp_stair_1" type="voice" say="Stairwell 1 serves penthouse to ground level and exits into the lobby."><![CDATA[Stairwell 1 serves penthouse to ground level and exits into the lobby.]]></data>
+
+    <data object="tour" name="bxp_defib" type="voice" say="This automated external defibrillator (AED) which comes with step-by-step instructions should you ever need to use it."><![CDATA[This automated external defibrillator (AED) which comes with step-by-step instructions should you ever need to use it.]]></data>
+
+    <data object="tour" name="bxp_fire_ext" type="voice" say="Fire extinguishers are located throughout the building. After this tour is over, click on one to learn how to use it."><![CDATA[Fire extinguishers are located throughout the building. After this tour is over, click on one to learn how to use it.]]></data>
+
+    <data object="tour" name="bxp_first_aid" type="voice" say="This First Aid Station contains basic supplies for minor conditions. Please seek professional medical help for serious injuries or ailments."><![CDATA[This First Aid Station contains basic supplies for minor conditions. Please seek professional medical help for serious injuries or ailments.]]></data>
+
+    <data object="tour" name="bxp_stair_2" type="voice" say="Stairwell 2 serves penthouse to ground level and exits into the lobby. Next let's head to Stairwell 1."><![CDATA[Stairwell 2 serves penthouse to ground level and exits into the lobby. Next let's head to Stairwell 1.]]></data>
+
+    <data object="tour" name="bxp_evac" type="voice" say="Should you ever need to evacuate the building do not use the elevators. Head to the nearest stairwell, go down to the lobby level and exit the building. Then proceed to your designated primary external assembly area."><![CDATA[Should you ever need to evacuate the building do not use the elevators. Head to the nearest stairwell, go down to the lobby level and exit the building. Then proceed to your designated primary external assembly area.]]></data>
+
+    <data object="tour" name="f2_exit_bldg" type="html"  pause="true" say="Click Here to Exit the Building."><![CDATA[
+    <span style="font-size:2em;line-height:1em;"
+    <br>
+        <div style="font-size:1.5em;line-height:1em;color:cyan;padding-top:1em;text-align:center" class="branch" data-next="f8_assembly_vid">Click Here to Exit the Building
+    <br></br>
+    <img class="next_arrow" style="width: 25%" src="hotspots/cont_arrow.png" />
+        </div>
+    </span>]]></data>
+
+    <data object="tour" name="f5_exit_bldg" type="html"  pause="true" say="Click Here to Exit the Building."><![CDATA[
+    <span style="font-size:2em;line-height:1em;"
+    <br>
+        <div style="font-size:1.5em;line-height:1em;color:cyan;padding-top:1em;text-align:center" class="branch" data-next="f8_assembly_vid">Click Here to Exit the Building
+    <br></br>
+    <img class="next_arrow" style="width: 25%" src="hotspots/cont_arrow.png" />
+        </div>
+    </span>]]></data>
+
+    <data object="tour" name="f8_exit_bldg" type="html" pause="true"  say="Click Here to Exit the Building."><![CDATA[
+    <span style="font-size:2em;line-height:1em;"
+    <br>
+
+        <div style="font-size:1.5em;line-height:1em;color:cyan;padding-top:1em;text-align:center" class="branch" data-next="dumb">Click Here to Exit the Building
+
+        <div style="font-size:1.5em;line-height:1em;color:cyan;padding-top:1em;text-align:center" class="branch" data-next="f8_assembly_vid">Click Here to Exit the Building
+
+    <br></br>
+    <img class="next_arrow" style="width: 25%" src="hotspots/cont_arrow.png" />
+        </div>
+    </span>]]></data>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--END FLOOR -->
+
+    <data object="tour" name="bxp_AA_vid" type="video"><![CDATA[
+        [{ "src": ["https://akproductionsmedia.streaming.mediaservices.windows.net/84f31434-1503-42f3-9e14-c713ae95e878/5404 composition Map_final2.ism/manifest(format=m3u8-cmaf)"]}]
+	]]>    </data>
+
+    <data object="tour" name="bxp_FF_vid" type="video"><![CDATA[
+        [{ "src": ["https://akproductionsmedia.streaming.mediaservices.windows.net/4357d404-8377-4aeb-bbc0-97927c3f0f2c/Generic High-Rise Fire Drill FIN.ism/manifest(format=m3u8-cmaf)"]}]
+	]]>    </data>
+
+
+    <data object="tour" name="interface_items" type="html" say="Before you start exploring your floor there are a few additional items to point out."><![CDATA[
+                <div id="overlay-content">
+    
+            <div class="flex-container animated fadeIn bg-gradient">
+                <div class="row fadeIn animated">
+        <div class="flex-item" id="close_me" style="cursor:pointer;">
+            <span style="font-size:1.2em;line-height:1.5em;text-align:center;">Before you start exploring your floor there are a few additional items to point out.</span><br>
+        </div>
+                    </div>
+                </div>
+            </div>
+	]]>    </data>
+
+
+
+
+
+    <data object="tour" name="shuttle_menu" type="interface" say="This is the Floor Feature Menu" el="items_but" x="-70" y="40" r="30"><![CDATA[
+        
+        <span style="color:white">Floor Feature Menu Icon</span>
+        <img  src="images/feature_menu_icon.png"/>
+     
+        
+	]]>    </data>
+
+
+    <data object="tour" name="shuttle_menu_info" type="placard" say="Within the Floor Feature Menu click on the blue text or icon to automatically move to that specific floor feature."><![CDATA[
+        Within the Floor Feature Menu click on the blue text or icon to automatically move to that specific floor feature.<br/><br/><img src="images/feature_menu.png" style="width:25%" />]]>
+    </data>
+
+    <data object="tour" name="vid_lib" type="interface" say="You can learn how to use emergency equipment by watching training videos available via the library" el="video_lib" x="-70" y="40" r="45"><![CDATA[
+   
+        <span style="color:white">Video Library</span>
+        <img style="width:25%" src="images/vid_play.png"/>
+       
+	]]>    </data>
+
+    <data object="tour" name="vid_lib_info" type="placard" say="Within the Video Library Menu click on the blue text to watch life safety feature videos."><![CDATA[
+        Within the Video Library Menu click on the blue text to watch life safety feature videos.<br/><br/><img src="images/video_menu.png" style="width:50%" />]]>
+    </data>
+
+
+
+    <data object="tour" name="mini_map" type="interface" say="Click on the minimap to view your entire floor and the location of all your safety features." el="video_lib" x="0" y="-106" r="-140"><![CDATA[
+        <span style="color:white">Mini Map</span>
+        <!-- <image style="position:absolute;bottom:10px;left:10px;" src="images/map_graphic.png" /> -->
+<img src="images/map_graphic.png" />
+	]]>    </data>
+
+    <data object="tour" name="flr2_tour_over" type="end_tour" pause="true" say="This guided tour is now over, and you will be returned to the starting point of the tour. Take a minute to navigate this floor, locate all life safety equipment. After the tour is completed, click on the double cyan arrows to start exploring your building."><![CDATA[
+           <div id="overlay-content">
+    
+            <div class="flex-container bg-gradient">
+            <!-- <div class="flex-container bg-image" style="background-image:url('images/building_2_bg.jpg');"> -->
+<div class="row">
+<div class="flex-item" id="close_me" data-endpano="GS__5010" style="cursor:pointer;">
+<span style="font-size:1.5em;line-height:1.5em;text-align:center;">This guided tour is now over, and you will be returned to the starting point of the tour. Take a minute to navigate this floor, locate all life safety equipment. After the tour is completed, click on the double cyan arrows to start exploring your building.</span><br>
+<div style="font-size:1.5em;line-height:1em;color:cyan;padding-top:1em;cursor:pointer">Click Here to Complete the Tour</div>
+</div>
+</div>
+</div>
+</div>
+	]]>    </data>
+
+    <data object="tour" name="flr5_tour_over" type="end_tour" pause="true" say="This guided tour is now over, and you will be returned to the starting point of the tour. Take a minute to navigate this floor, locate all life safety equipment. After the tour is completed, click on the double cyan arrows to start exploring your building."><![CDATA[
+           <div id="overlay-content">
+    
+            <div class="flex-container bg-gradient">
+            <!-- <div class="flex-container bg-image" style="background-image:url('images/building_2_bg.jpg');"> -->
+<div class="row">
+<div class="flex-item" id="close_me" data-endpano="GS__5076" style="cursor:pointer;">
+<span style="font-size:1.5em;line-height:1.5em;text-align:center;">This guided tour is now over, and you will be returned to the starting point of the tour. Take a minute to navigate this floor, locate all life safety equipment. After the tour is completed, click on the double cyan arrows to start exploring your building.</span><br>
+<div style="font-size:1.5em;line-height:1em;color:cyan;padding-top:1em;cursor:pointer">Click Here to Complete the Tour</div>
+</div>
+</div>
+</div>
+</div>
+	]]>    </data>
+
+    <data object="tour" name="flr8_tour_over" type="end_tour" pause="true" say="This guided tour is now over, and you will be returned to the starting point of the tour. Take a minute to navigate this floor, locate all life safety equipment. After the tour is completed, click on the double cyan arrows to start exploring your building."><![CDATA[
+           <div id="overlay-content">
+    
+            <div class="flex-container bg-gradient">
+            <!-- <div class="flex-container bg-image" style="background-image:url('images/building_2_bg.jpg');"> -->
+<div class="row">
+<div class="flex-item" id="close_me" data-endpano="GS__5089" style="cursor:pointer;">
+<span style="font-size:1.5em;line-height:1.5em;text-align:center;">This guided tour is now over, and you will be returned to the starting point of the tour. Take a minute to navigate this floor, locate all life safety equipment. After the tour is completed, click on the double cyan arrows to start exploring your building.</span><br>
+<div style="font-size:1.5em;line-height:1em;color:cyan;padding-top:1em;cursor:pointer">Click Here to Complete the Tour</div>
+</div>
+</div>
+</div>
+</div>
+	]]>    </data>
+
+
+
+
+
+
+
+</krpano>

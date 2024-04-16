@@ -1,0 +1,48 @@
+App V1_4 -> App_BXP
+
+--Changes--
+overlay.js
+Overlay_explore.js
+Path_new_preload.xml
+tourpress.js
+styles.xml
+tour-xml-generator.js
+explore.xml
+debug.xml
+app.xml
+scene.js
+
+
+--Overlay.js--
+Find_item_closest
+
+
+--Overlay_explore.js--
+find_item_closest
+
+--path_new_preload.xml--
+search_item toLowerCase()
+
+--Tourpress--
+Change in app_Version
+
+--Styles.xml--
+Adds exit_floor_add
+Adds outside_1
+adds exit_floor_button_add
+
+--tour-xml-generator.js--
+Removes file subfolder
+
+--Explore.xml--
+Adds Find_item_closest action
+Adds Add_exit_floor_add action
+
+--Debug.xml--
+Changes action make_mapspot
+
+--App.xml--
+Changes scene_id to debug
+
+--Scene.js--
+Allows the "Floor" ui name to be changed within ProjectData.xml
